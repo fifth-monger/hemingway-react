@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemingway Nursery | Roycroft Daylilies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f9f4ec;
+    --parchment: #f0e8d8;
+    --bark: #3d2b1f;
+    --bark-mid: #5c3d28;
+    --gold: #c8891a;
+    --gold-light: #e8a93a;
+    --sage: #5a6b4a;
+    --sage-light: #7a8f68;
+    --terra: #b85c38;
+    --moss: #3a4c2e;
+    --text: #2a1e14;
+    --text-mid: #5a4535;
+    --text-light: #8a7060;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+    --max: 1180px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* UTILITY */
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+  .serif { font-family: var(--serif); }
+  .gold { color: var(--gold); }
+  .terra { color: var(--terra); }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bark);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--parchment);
+    letter-spacing: 0.03em;
+  }
+
+  .nav-brand span { color: var(--gold-light); font-style: italic; }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--parchment); text-decoration: none;
+    opacity: 0.8; transition: opacity 0.2s;
+  }
+
+  .nav-links a:hover { opacity: 1; color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--gold); color: var(--bark) !important;
+    padding: 0.4rem 1.1rem; border-radius: 2px;
+    opacity: 1 !important; font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 92vh;
+    background:
+      linear-gradient(to bottom, rgba(42,30,20,0.62) 0%, rgba(42,30,20,0.35) 60%, rgba(42,30,20,0.7) 100%),
+      url('https://roycroftdaylilies.com/files/image/misc-05-sdlg-tray-2C.jpg') center/cover no-repeat;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding-bottom: 7rem;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400;
+    color: #fdf8f2;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 300;
+    color: rgba(253,248,242,0.85);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block; text-decoration: none;
+    font-family: var(--sans); font-size: 0.8rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    padding: 0.9rem 2rem; border-radius: 2px;
+    transition: all 0.2s; cursor: pointer; border: none;
+  }
+
+  .btn-primary { background: var(--gold); color: var(--bark); }
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-outline {
+    background: transparent; color: #fdf8f2;
+    border: 1.5px solid rgba(253,248,242,0.55);
+  }
+
+  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  /* hero scroll hint */
+  .scroll-hint {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: rgba(253,248,242,0.5);
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    animation: bob 2.2s ease-in-out infinite;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, rgba(253,248,242,0.4), transparent);
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ─── SEASON BANNER ─── */
+  .season-band {
+    background: var(--sage); color: var(--parchment);
+    padding: 0.8rem 2rem;
+    text-align: center;
+    font-size: 0.82rem; letter-spacing: 0.06em;
+    font-weight: 400;
+  }
+
+  .season-band strong { color: var(--gold-light); font-weight: 500; }
+
+  /* ─── INTRO ─── */
+  .intro {
+    padding: 7rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .intro-text h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text p {
+    color: var(--text-mid);
+    margin-bottom: 1.2rem;
+    font-size: 0.98rem;
+    line-height: 1.85;
+  }
+
+  .intro-text .link-subtle {
+    color: var(--gold); font-weight: 500; text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  .intro-image {
+    position: relative;
+  }
+
+  .intro-image-main {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; border-radius: 2px;
+    display: block;
+  }
+
+  .intro-image-accent {
+    position: absolute; bottom: -2rem; left: -2rem;
+    width: 45%; aspect-ratio: 1;
+    object-fit: cover; border-radius: 2px;
+    border: 5px solid var(--cream);
+  }
+
+  .stat-row {
+    display: flex; gap: 2.5rem;
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid rgba(90,70,53,0.15);
+  }
+
+  .stat strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 2rem; font-weight: 400;
+    color: var(--bark-mid);
+  }
+
+  .stat span {
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--text-light);
+  }
+
+  /* ─── NEW VARIETIES ─── */
+  .varieties-section {
+    background: var(--bark);
+    padding: 6rem 0;
+    color: var(--parchment);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .varieties-section::before {
+    content: '2026';
+    position: absolute; right: -1rem; top: 1rem;
+    font-family: var(--serif); font-size: 12rem;
+    font-weight: 600; opacity: 0.04; color: var(--gold-light);
+    line-height: 1; pointer-events: none;
+    letter-spacing: -0.05em;
+  }
+
+  .section-label {
+    font-size: 0.72rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--gold-light); margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  .varieties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.6rem;
+    margin-top: 3rem;
+  }
+
+  .variety-chip {
+    padding: 0.7rem 1rem;
+    background: rgba(253,248,242,0.06);
+    border: 1px solid rgba(200,137,26,0.25);
+    border-radius: 2px;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--parchment);
+    letter-spacing: 0.03em;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+
+  .variety-chip:hover {
+    background: rgba(200,137,26,0.15);
+    border-color: var(--gold);
+  }
+
+  .varieties-note {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: rgba(240,232,216,0.6);
+    font-style: italic;
+    max-width: 520px;
+  }
+
+  /* ─── FEATURED CULTIVAR ─── */
+  .featured-section { padding: 7rem 0; }
+
+  .featured-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem; align-items: center;
+  }
+
+  .featured-badge {
+    display: inline-block;
+    background: var(--gold); color: var(--bark);
+    font-size: 0.65rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    padding: 0.3rem 0.8rem; border-radius: 2px;
+    margin-bottom: 1.2rem;
+  }
+
+  .featured-name {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    color: var(--bark);
+  }
+
+  .featured-name em { color: var(--gold); font-style: italic; }
+
+  .featured-desc {
+    color: var(--text-mid); font-size: 0.98rem;
+    line-height: 1.85; margin-bottom: 2rem;
+  }
+
+  .featured-meta {
+    display: flex; gap: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(90,70,53,0.12);
+    border-bottom: 1px solid rgba(90,70,53,0.12);
+    margin-bottom: 2rem;
+  }
+
+  .featured-meta-item { font-size: 0.8rem; }
+  .featured-meta-item .label { color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; display: block; margin-bottom: 0.2rem; }
+  .featured-meta-item .val { color: var(--bark-mid); font-weight: 400; }
+
+  .featured-img {
+    width: 100%; aspect-ratio: 3/4;
+    object-fit: cover; border-radius: 2px;
+    display: block;
+  }
+
+  /* ─── WHY US (PILLARS) ─── */
+  .pillars-section {
+    background: var(--parchment);
+    padding: 6rem 0;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .pillar { position: relative; }
+
+  .pillar-num {
+    font-family: var(--serif);
+    font-size: 3.5rem; font-weight: 400;
+    color: rgba(90,70,53,0.1);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar h3 {
+    font-family: var(--serif);
+    font-size: 1.15rem; font-weight: 400;
+    color: var(--bark-mid);
+    margin-bottom: 0.8rem;
+  }
+
+  .pillar p {
+    font-size: 0.9rem; color: var(--text-mid); line-height: 1.85;
+  }
+
+  /* ─── HOURS + VISIT ─── */
+  .visit-section {
+    padding: 7rem 0;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start;
+  }
+
+  .hours-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .hours-table td { padding: 0.7rem 0; font-size: 0.9rem; border-bottom: 1px solid rgba(90,70,53,0.1); }
+  .hours-table td:first-child { color: var(--text-light); font-weight: 400; padding-right: 2rem; }
+  .hours-table td:last-child { color: var(--bark-mid); font-weight: 500; }
+
+  .contact-block { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-item .ckey {
+    min-width: 70px; color: var(--text-light);
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.08em; padding-top: 0.1rem;
+  }
+
+  .contact-item a { color: var(--gold); text-decoration: none; }
+  .contact-item a:hover { text-decoration: underline; }
+
+  .guarantee-box {
+    margin-top: 3rem;
+    background: var(--bark);
+    color: var(--parchment);
+    padding: 2rem 2.2rem;
+    border-radius: 2px;
+  }
+
+  .guarantee-box h4 {
+    font-family: var(--serif); font-size: 1.1rem;
+    font-weight: 400; margin-bottom: 0.7rem; color: var(--gold-light);
+  }
+
+  .guarantee-box p { font-size: 0.88rem; color: rgba(240,232,216,0.8); line-height: 1.8; }
+
+  /* ─── ABOUT / STORY ─── */
+  .story-section {
+    background: var(--sage);
+    padding: 6rem 0;
+    color: var(--parchment);
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .story-img-col {
+    background: linear-gradient(to right, rgba(58,76,46,0.45), rgba(58,76,46,0.45)), url('https://roycroftdaylilies.com/gallery.php?image=misc-Bob-hybridizing.jpg') center/cover no-repeat;
+    min-height: 480px;
+  }
+
+  .story-text-col { padding: 5rem 4rem; }
+
+  .story-text-col p {
+    font-size: 0.95rem; line-height: 1.9;
+    color: rgba(240,232,216,0.85);
+    margin-bottom: 1.2rem;
+  }
+
+  .story-text-col p:last-child { margin-bottom: 0; }
+
+  /* ─── NEWSLETTER ─── */
+  .newsletter-section {
+    padding: 5rem 0; text-align: center;
+    border-top: 1px solid rgba(90,70,53,0.1);
+  }
+
+  .newsletter-section p {
+    color: var(--text-mid); max-width: 440px; margin: 0.8rem auto 2rem;
+    font-size: 0.92rem;
+  }
+
+  .newsletter-form {
+    display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+    max-width: 460px; margin: 0 auto;
+  }
+
+  .newsletter-form input {
+    flex: 1; min-width: 220px;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid rgba(90,70,53,0.25);
+    border-radius: 2px;
+    font-family: var(--sans); font-size: 0.9rem;
+    background: white; color: var(--text);
+    outline: none;
+  }
+
+  .newsletter-form input:focus { border-color: var(--gold); }
+  .newsletter-form input::placeholder { color: var(--text-light); }
+
+  /* ─── REVIEWS ─── */
+  .reviews-section {
+    background: var(--parchment);
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 3.5rem 0;
+    text-align: left;
+  }
+
+  .review-card {
+    background: white;
+    border: 1px solid rgba(90,70,53,0.1);
+    border-radius: 2px;
+    padding: 1.8rem 1.8rem 1.5rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+
+  .review-stars { display: flex; gap: 3px; }
+  .review-stars span { color: var(--gold); font-size: 0.9rem; }
+
+  .review-text {
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .review-text::before { content: '\201C'; }
+  .review-text::after  { content: '\201D'; }
+
+  .review-author {
+    font-size: 0.78rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--bark-mid);
+    border-top: 1px solid rgba(90,70,53,0.1);
+    padding-top: 0.9rem;
+  }
+
+  .review-cta-box {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 1rem;
+    background: var(--bark);
+    color: var(--parchment);
+    padding: 2.5rem 3.5rem;
+    border-radius: 2px;
+    margin-top: 1rem;
+  }
+
+  .review-cta-box p {
+    font-size: 0.9rem;
+    color: rgba(240,232,216,0.75);
+    max-width: 340px; line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .reviews-grid { grid-template-columns: 1fr; }
+    .review-cta-box { padding: 2rem 1.5rem; }
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bark);
+    color: rgba(240,232,216,0.65);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1.1rem; color: var(--parchment);
+    margin-bottom: 0.7rem;
+  }
+
+  .footer-brand span { color: var(--gold-light); font-style: italic; }
+
+  .footer-tagline {
+    font-size: 0.82rem; line-height: 1.7;
+    color: rgba(240,232,216,0.5);
+    margin-bottom: 0; max-width: 220px;
+  }
+
+  .footer-col h5 {
+    font-family: var(--sans);
+    font-size: 0.7rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.5rem; }
+  .footer-col ul li a {
+    color: rgba(240,232,216,0.6); text-decoration: none;
+    font-size: 0.85rem; transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(253,248,242,0.08);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.75rem;
+    color: rgba(240,232,216,0.35);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .intro { grid-template-columns: 1fr; gap: 3rem; }
+    .intro-image-accent { display: none; }
+    .featured-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .pillars-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .visit-section { grid-template-columns: 1fr; gap: 3rem; }
+    .story-section { grid-template-columns: 1fr; }
+    .story-img-col { min-height: 260px; }
+    .story-text-col { padding: 3rem 2rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Hemingway Nursery &nbsp;·&nbsp; <span>Roycroft Daylilies</span></div>
+  <ul class="nav-links">
+    <li><a href="#varieties">2026 Varieties</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#visit">Visit & Hours</a></li>
+    <li><a href="#" class="nav-cta">Shop Daylilies</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Hemingway, South Carolina — Est. Roycroft</p>
+    <h1 class="hero-title">Where <em>every bloom</em> is grown with intention</h1>
+    <p class="hero-sub">Homegrown daylilies from our fields to your garden. Hundreds of cultivars, generations of care, and a 1-year guarantee on every plant.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary">Browse Our Daylilies</a>
+      <a href="#visit" class="btn btn-outline">Plan Your Visit</a>
+    </div>
+  </div>
+  <span class="scroll-hint">Scroll</span>
+</section>
+
+<!-- SEASON BAND -->
+<div class="season-band">
+  <strong>2026 Season Open:</strong> &nbsp;April 1 – June 30 &nbsp;·&nbsp; Thursday – Saturday, 9am–4pm &nbsp;·&nbsp; Also open Sept 1 – Oct 31 for fall planting
+</div>
+
+<!-- INTRO -->
+<section class="intro container" id="about">
+  <div class="intro-text">
+    <p class="section-label">About the Nursery</p>
+    <h2 class="serif">Quality daylilies, homegrown in our fields.</h2>
+    <p>At Hemingway Nursery, we live where we work — our home is right here among the fields. Every daylily is individually grown and nurtured until it's ready to ship or meet you in person. We love talking about daylilies, and we welcome every question.</p>
+    <p>We ship bare-root within 24 hours of harvest, manicured and treated, so you receive large, healthy plants ready for your garden. Unlike some nurseries, we never upcharge for card payments — and your credit card isn't charged until the week of shipment.</p>
+    <div class="stat-row">
+      <div class="stat"><strong>100s</strong><span>of cultivars available</span></div>
+      <div class="stat"><strong>1 Year</strong><span>plant guarantee</span></div>
+      <div class="stat"><strong>2 fans</strong><span>minimum per order</span></div>
+    </div>
+    <br>
+    <a href="#" class="link-subtle">Explore all daylilies &rarr;</a>
+  </div>
+  <div class="intro-image">
+    <img src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg" alt="Dream Souffle daylily in bloom" class="intro-image-main">
+    
+  </div>
+</section>
+
+<!-- 2026 NEW VARIETIES -->
+<section class="varieties-section" id="varieties">
+  <div class="container">
+    <p class="section-label">Fresh for This Season</p>
+    <h2 class="section-title">2026 New Arrivals</h2>
+    <p style="color: rgba(240,232,216,0.7); max-width: 480px; font-size: 0.95rem; margin-top: 0.5rem;">Sixteen new cultivars joining our collection this year. Supply is limited — order early to secure yours.</p>
+    <div class="varieties-grid">
+      <div class="variety-chip">Blackthorne</div>
+      <div class="variety-chip">Kansas Kitten</div>
+      <div class="variety-chip">Adam Pitkin Hurd</div>
+      <div class="variety-chip">Bright in the Night</div>
+      <div class="variety-chip">Early Snow</div>
+      <div class="variety-chip">Gentle Ed</div>
+      <div class="variety-chip">Indira</div>
+      <div class="variety-chip">Lilting Belle</div>
+      <div class="variety-chip">Nectarine Flip</div>
+      <div class="variety-chip">Red Pinocchio</div>
+      <div class="variety-chip">Round Midnight</div>
+      <div class="variety-chip">Sassy Shannon</div>
+      <div class="variety-chip">Tetra Siloam Showgirl</div>
+      <div class="variety-chip">Passion District</div>
+      <div class="variety-chip">Royal Rage</div>
+      <div class="variety-chip">Roses In Snow</div>
+    </div>
+    <p class="varieties-note">We list only cultivars that re-bloom for us here in lower Zone 8.</p>
+  </div>
+</section>
+
+<!-- FEATURED CULTIVAR -->
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-inner">
+      <div>
+        <span class="featured-badge">This Week's Featured Cultivar</span>
+        <h2 class="featured-name"><em>Blackthorne</em></h2>
+        <p class="featured-desc">Cream-colored petals with a dark purple to burgundy eye — similar to Calico Jack but with more distinct, striking coloring. A fast grower and disease resistant variety, Blackthorne earned an AHS Honorable Mention in 2001 and has remained a standout in our fields.</p>
+        <div class="featured-meta">
+          <div class="featured-meta-item">
+            <span class="label">Award</span>
+            <span class="val">AHS 2001 Honorable Mention</span>
+          </div>
+          <div class="featured-meta-item">
+            <span class="label">Growth</span>
+            <span class="val">Fast, disease resistant</span>
+          </div>
+          <div class="featured-meta-item">
+            <span class="label">Style</span>
+            <span class="val">Cream + burgundy eye</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary">View Blackthorne & Order</a>
+      </div>
+      <img src="https://roycroftdaylilies.com/files/image/Blackthorne%20HR.jpg" alt="Blackthorne daylily" class="featured-img">
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars-section">
+  <div class="container">
+    <p class="section-label">Why Hemingway Nursery</p>
+    <h2 class="serif section-title" style="color: var(--bark); font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0;">Our promise to every gardener</h2>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Grown Here, Shipped Fresh</h3>
+        <p>We ship bare-root within 24 hours of harvest — manicured, treated, and packed to arrive in excellent condition. Large, established plants, not afterthoughts.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>No Hidden Fees</h3>
+        <p>Your card is never charged until the week of shipment. No upcharge for credit cards. No surprises. Just honest pricing for beautiful plants.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>One-Year Guarantee</h3>
+        <p>If your flowers don't grow as you'd like for any reason, we'll ship you a replacement — no questions asked — for up to a year after purchase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT + HOURS -->
+<section class="visit-section container" id="visit">
+  <div>
+    <p class="section-label">Come See Us</p>
+    <h2 class="serif" style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1rem; color: var(--bark);">Hours & Getting Here</h2>
+    <p style="color: var(--text-mid); font-size: 0.92rem; max-width: 420px;">We live at the nursery, so if you'd like to visit outside scheduled hours, just call ahead. We're happy to accommodate when we're around.</p>
+
+    <table class="hours-table">
+      <tr><td>Spring Season</td><td>Apr 1 – Jun 30 (closed Jul 1–Aug 31)</td></tr>
+      <tr><td>Fall Season</td><td>Sept 1 – Oct 31</td></tr>
+      <tr><td>Open Days</td><td>Thursday, Friday, Saturday</td></tr>
+      <tr><td>Hours</td><td>9:00 am – 4:00 pm</td></tr>
+      <tr><td>Online Orders</td><td>Always open, Apr 1 – Oct 31 shipping</td></tr>
+    </table>
+
+    <div class="contact-block">
+      <div class="contact-item">
+        <span class="ckey">Address</span>
+        <span>3954 Hemingway Highway, Hemingway, SC 29554</span>
+      </div>
+      <div class="contact-item">
+        <span class="ckey">Lucille</span>
+        <a href="tel:9193064329">919-306-4329</a>
+      </div>
+      <div class="contact-item">
+        <span class="ckey">Scott</span>
+        <a href="tel:9193064230">919-306-4230</a>
+      </div>
+      <div class="contact-item">
+        <span class="ckey">Email</span>
+        <a href="mailto:info@hemingwaynursery.com">info@hemingwaynursery.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="guarantee-box">
+      <h4>While You're in the Area</h4>
+      <p>Make a day of it — visit us and Scott's Barbeque for lunch on the same trip. Scott's is world-renowned for their award-winning barbecue. There's often a line out the door, and for good reason.</p>
+    </div>
+
+    <div style="margin-top: 2rem; padding: 2rem; border: 1px solid rgba(90,70,53,0.15); border-radius: 2px;">
+      <h4 class="serif" style="font-size: 1rem; margin-bottom: 0.7rem; color: var(--bark-mid);">Visiting in person?</h4>
+      <p style="font-size: 0.88rem; color: var(--text-mid); line-height: 1.8;">Container-grown daylilies are available for purchase at the nursery — well-established in pots and ready to go home immediately. Container plants cannot be shipped by mail; all mail orders are shipped bare-root.</p>
+    </div>
+
+    <div style="margin-top: 1.5rem; padding: 2rem; background: var(--sage); color: var(--parchment); border-radius: 2px;">
+      <h4 style="font-family: var(--serif); font-size: 1rem; margin-bottom: 0.7rem; color: var(--gold-light);">Gift Certificates</h4>
+      <p style="font-size: 0.88rem; color: rgba(240,232,216,0.8); line-height: 1.8;">Hemingway Nursery Gift Certificates make wonderful gifts for any occasion — available for any amount. Call Scott at 919-306-4230 or purchase through our website.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story-section">
+  <div class="story-img-col"></div>
+  <div class="story-text-col">
+    <p class="section-label" style="color: var(--gold-light);">Our Introductions</p>
+    <h2 class="serif" style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin-bottom: 1.5rem; color: var(--parchment);">Roycroft Originals</h2>
+    <p>Bob Roycroft has been introducing original daylily cultivars since 2009. Each year, carefully selected seedlings make their way from the trial beds into our catalog — and into gardens across the country.</p>
+    <p>Our most recent introduction, <em>Lucille Williams</em> (2023), was named in honor of the family. Earlier cultivars from 2009–2022 remain available while supplies last.</p>
+    <p>We also maintain a collection of unregistered seedlings — Roycroft SELECT, SUPER GIANT, DOUBLE FLOWERED, WHITE, GIANT ORANGE, and UFO types — for gardeners who love to discover something before it has a name.</p>
+    <br>
+    <a href="#" class="btn btn-outline" style="font-size: 0.75rem;">View All Roycroft Introductions</a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container">
+    <p class="section-label">Stay in the Loop</p>
+    <h2 class="serif" style="font-size: 1.8rem; font-weight: 400; color: var(--bark);">Nursery Newsletter</h2>
+    <p>Planting tips, sale announcements, and new variety news — sent monthly during the growing season. Unsubscribe anytime.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com">
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <p class="section-label">What Our Customers Say</p>
+    <h2 class="serif" style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 400; color: var(--bark);">Happy gardeners, healthy daylilies</h2>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">The plants arrived huge and healthy — two fans each, just like they promised. I've ordered from other nurseries and nothing compares. Blackthorne is already blooming in its first season.</p>
+        <p class="review-author">Margaret T. &mdash; Virginia</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">Scott and Lucille are the most knowledgeable, genuinely kind people. Called with questions about zone compatibility and they talked with me for 20 minutes. Rare to find that anymore.</p>
+        <p class="review-author">Dale R. &mdash; North Carolina</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">Third year ordering from Hemingway Nursery. My garden has been transformed. The Roycroft introductions are stunning — you can't find these cultivars just anywhere.</p>
+        <p class="review-author">Susan M. &mdash; Georgia</p>
+      </div>
+    </div>
+
+    <div class="review-cta-box">
+      <h3 class="serif" style="font-size: 1.3rem; font-weight: 400; color: var(--gold-light);">Enjoyed your daylilies?</h3>
+      <p>We'd love to hear about your garden. Leaving a review helps other gardeners find us and means the world to our small family nursery.</p>
+      <a href="https://g.page/HemingwayNursery/review?rc" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        Leave a Google Review
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Hemingway Nursery &nbsp;·&nbsp; <span>Roycroft Daylilies</span></p>
+        <p class="footer-tagline">3954 Hemingway Highway<br>Hemingway, SC 29554<br><br>Lucille: 919-306-4329<br>Scott: 919-306-4230</p>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#">Browse All Daylilies</a></li>
+          <li><a href="#">2026 New Varieties</a></li>
+          <li><a href="#">Clearance Items</a></li>
+          <li><a href="#">Sale Items</a></li>
+          <li><a href="#">Roycroft Introductions</a></li>
+          <li><a href="#">Gift Certificates</a></li>
+          <li><a href="#">Seedlings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Nursery</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Climate Zones</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Photo Gallery</a></li>
+          <li><a href="#">Map & Directions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Account</h5>
+        <ul>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Shopping Cart</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Out of Stock</a></li>
+          <li><a href="#">Printed Catalog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hemingway Nursery · Roycroft Daylilies. All rights reserved.</span>
+      <a href="https://g.page/HemingwayNursery/review?rc" style="color: rgba(240,232,216,0.4); text-decoration: none;">Leave us a Google review</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
