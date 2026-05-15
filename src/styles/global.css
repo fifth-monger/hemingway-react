@@ -170,7 +170,6 @@ nav {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .scroll-hint {
@@ -215,7 +214,6 @@ nav {
 }
 
 /* ─── INTRO ─── */
-.intro-section { background: var(--cream); }
 .intro {
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -421,7 +419,6 @@ nav {
 .pillar p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.85; }
 
 /* ─── VISIT ─── */
-.visit-outer { background: var(--cream); }
 .visit-section {
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -490,10 +487,11 @@ nav {
   background: var(--sage);
   padding: 6rem 0;
   color: var(--parchment);
+}
+.story-inner {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 0;
-  overflow: hidden;
 }
 .story-img-col {
   background:
@@ -701,7 +699,7 @@ footer {
 
   .visit-section { grid-template-columns: 1fr; gap: 3rem; }
 
-  .story-section { grid-template-columns: 1fr; }
+  .story-inner { grid-template-columns: 1fr; }
   .story-img-col { min-height: 260px; }
   .story-text-col { padding: 3rem 2rem; }
 
@@ -712,6 +710,5 @@ footer {
 }
 @media (max-width: 560px) {
   .footer-inner { grid-template-columns: 1fr; }
-  .hero { padding-bottom: 5rem; }
   .stat-row { gap: 1.5rem; }
 }

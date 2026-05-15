@@ -1,6 +1,7 @@
 export default function Story() {
   return (
     <section className="story-section">
+      <div className="container story-inner">
       <div className="story-img-col" />
       <div className="story-text-col">
         <p className="section-label" style={{ color: 'var(--gold-light)' }}>Our Introductions</p>
@@ -26,6 +27,7 @@ export default function Story() {
         <a href="#" className="btn btn-outline" style={{ fontSize: '0.75rem' }}>
           View All Roycroft Introductions
         </a>
+      </div>
       </div>
     </section>
   )
