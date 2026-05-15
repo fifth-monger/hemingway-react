@@ -12,8 +12,8 @@ export default function Nav() {
         </Link>
 
         <ul className="nav-links">
-          <li><NavLink to="/varieties">2026 Varieties</NavLink></li>
           <li><NavLink to="/about">Our Story</NavLink></li>
+          <li><NavLink to="/varieties">2026 Varieties</NavLink></li>
           <li><NavLink to="/about#visit">Visit &amp; Hours</NavLink></li>
           {/* TODO: Replace # with Square store URL */}
           <li><a href="#" className="nav-cta">Shop Daylilies</a></li>
