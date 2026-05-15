@@ -596,7 +596,7 @@ nav {
 /* ─── REVIEWS ─── */
 .reviews-section {
   background: var(--parchment);
-  padding: 6rem 0;
+  padding: 0 0 6rem 0;
   text-align: center;
 }
 .reviews-grid {
