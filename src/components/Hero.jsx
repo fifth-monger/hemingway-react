@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="container">
-        <p className="hero-eyebrow">Hemingway, South Carolina — Est. Roycroft</p>
+        <p className="hero-eyebrow">Hemingway, South Carolina</p>
         <h1 className="hero-title">
           Where <em>every bloom</em> is grown with intention
         </h1>

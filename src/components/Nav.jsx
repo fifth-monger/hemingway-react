@@ -8,7 +8,7 @@ export default function Nav() {
     <nav>
       <div className="nav-top">
         <Link to="/" className="nav-brand">
-          Hemingway Nursery &nbsp;·&nbsp; <span>Roycroft Daylilies</span>
+          Hemingway Nursery &nbsp;·&nbsp; <span>feat. Roycroft Daylilies</span>
         </Link>
 
         <ul className="nav-links">
@@ -31,8 +31,8 @@ export default function Nav() {
       </div>
 
       <div className={`nav-mobile${open ? ' open' : ''}`}>
-        <NavLink to="/varieties" onClick={() => setOpen(false)}>2026 Varieties</NavLink>
         <NavLink to="/about" onClick={() => setOpen(false)}>Our Story</NavLink>
+        <NavLink to="/varieties" onClick={() => setOpen(false)}>2026 Varieties</NavLink>
         <NavLink to="/about#visit" onClick={() => setOpen(false)}>Visit &amp; Hours</NavLink>
         {/* TODO: Replace # with Square store URL */}
         <a href="#" className="nav-cta" onClick={() => setOpen(false)}>Shop Daylilies</a>

@@ -13,7 +13,6 @@ export default function Home() {
       <Nav />
       <Hero />
       <Intro />
-      <FeaturedVariety compact />
       <Pillars />
       <Reviews />
       <Newsletter />

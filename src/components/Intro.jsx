@@ -1,6 +1,7 @@
 export default function Intro() {
   return (
-    <section className="intro container" id="about">
+    <section className="intro-section" id="about">
+      <div className="container intro">
       <div className="intro-text">
         <p className="section-label">About the Nursery</p>
         <h2 className="serif">Quality daylilies, homegrown in our fields.</h2>
@@ -39,6 +40,7 @@ export default function Intro() {
           alt="Dream Souffle daylily in bloom"
           className="intro-image-main"
         />
+      </div>
       </div>
     </section>
   )

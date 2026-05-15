@@ -1,6 +1,7 @@
 export default function Visit() {
   return (
-    <section className="visit-section container" id="visit">
+    <section className="visit-outer" id="visit">
+      <div className="container visit-section">
       <div>
         <p className="section-label">Come See Us</p>
         <h2 className="serif" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', marginBottom: '1rem', color: 'var(--bark)' }}>
@@ -67,6 +68,7 @@ export default function Visit() {
             for any amount. Call Scott at 919-306-4230 or purchase through our website.
           </p>
         </div>
+      </div>
       </div>
     </section>
   )
