@@ -541,13 +541,13 @@ nav {
 }
 
 .newsletter-inner {
-  max-width: 680px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .newsletter-eyebrow {
   font-family: var(--sans);
-  font-size: 0.72rem; font-weight: 500;
+  font-size: 1.05rem; font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.22em;
   color: var(--gold-light);
   margin-bottom: 1rem;
@@ -563,11 +563,12 @@ nav {
 }
 
 .newsletter-sub {
-  font-size: 1.15rem; 
+  font-size: 1.25rem; 
   font-weight: 300;
   color: rgba(253,248,242,0.78);
   line-height: 1.8;
   margin-bottom: 2.5rem;
+  padding: 0 .5rem;
 }
 
 .newsletter-form {
