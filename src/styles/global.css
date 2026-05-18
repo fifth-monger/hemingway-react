@@ -73,7 +73,11 @@ nav {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.nav-brand span { color: var(--gold-light); font-style: italic; font-size: 1rem; }
+.nav-brand span { 
+  color: var(--gold-light); 
+  font-style: italic; 
+  font-size: 1rem; 
+}
 
 .nav-links {
   display: flex; gap: 2rem; list-style: none;
@@ -200,9 +204,12 @@ nav {
 
 /* ─── SECTION LABELS ─── */
 .section-label {
-  font-size: 0.72rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.2em;
-  color: var(--gold-light); margin-bottom: 0.8rem;
+  font-size: 1.15rem; 
+  font-weight: 500;
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
+  color: var(--gold-light); 
+  margin-bottom: 0.8rem;
 }
 
 .section-title {
@@ -233,13 +240,13 @@ nav {
 .intro-text p {
   color: var(--text-mid);
   margin-bottom: 1.2rem;
-  font-size: 0.98rem;
+  font-size: 1.25rem;
   line-height: 1.85;
 }
 .intro-text .link-subtle {
   color: var(--gold); font-weight: 500; text-decoration: none;
   border-bottom: 1px solid var(--gold);
-  font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em;
 }
 
 .intro-images {
@@ -268,7 +275,7 @@ nav {
   color: var(--bark-mid);
 }
 .stat span {
-  font-size: 0.75rem; text-transform: uppercase;
+  font-size: 1rem; text-transform: uppercase;
   letter-spacing: 0.1em; color: var(--text-light);
 }
 
@@ -415,10 +422,16 @@ nav {
 }
 .pillar h3 {
   font-family: var(--serif);
-  font-size: 1.15rem; font-weight: 400;
-  color: var(--bark-mid); margin-bottom: 0.8rem;
+  font-size: 1.5rem; 
+  font-weight: 400;
+  color: var(--bark-mid); 
+  margin-bottom: 0.8rem;
 }
-.pillar p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.85; }
+.pillar p { 
+  font-size: 1.25rem; 
+  color: var(--text-mid); 
+  line-height: 1.85; 
+}
 
 /* ─── VISIT ─── */
 .visit-section {
@@ -619,13 +632,16 @@ nav {
 .review-stars { display: flex; gap: 3px; }
 .review-stars span { color: var(--gold); font-size: 0.9rem; }
 .review-text {
-  font-size: 0.92rem; color: var(--text-mid);
-  line-height: 1.85; font-style: italic; flex: 1;
+  font-size: 1.25rem; 
+  color: var(--text-mid);
+  line-height: 1.85;
+   font-style: italic;
+    flex: 1;
 }
 .review-text::before { content: '\201C'; }
 .review-text::after  { content: '\201D'; }
 .review-author {
-  font-size: 0.78rem; font-weight: 500;
+  font-size: 0.85rem; font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--bark-mid);
   border-top: 1px solid rgba(90,70,53,0.1);
@@ -642,7 +658,7 @@ nav {
   border-radius: 2px; margin-top: 1rem;
 }
 .review-cta-box p {
-  font-size: 1rem; 
+  font-size: 1.25rem; 
   color: rgba(240,232,216,0.75);
   max-width: 460px; 
   line-height: 1.7;
