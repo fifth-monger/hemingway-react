@@ -34,11 +34,21 @@ export default function Intro() {
           <a href="#" className="link-subtle">Explore all daylilies &rarr;</a>
         </div>
 
-        <div className="intro-image">
+        <div className="intro-images">
           <img
             src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
-            alt="Dream Souffle daylily in bloom"
-            className="intro-image-main"
+            alt="Daylily in bloom"
+            className="intro-img"
+          />
+          <img
+            src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
+            alt="Daylily in bloom"
+            className="intro-img"
+          />
+          <img
+            src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
+            alt="Daylily in bloom"
+            className="intro-img intro-img-wide"
           />
         </div>
       </div>

@@ -129,7 +129,7 @@ nav {
 
 /* ─── HERO ─── */
 .hero {
-  min-height: 92vh;
+  min-height: calc(100vh - 60px);
   background:
     linear-gradient(to bottom, rgba(42,30,20,0.77) 0%, rgba(42,30,20,0.60) 60%, rgba(42,30,20,0.87) 100%),
     url('https://roycroftdaylilies.com/files/image/misc-05-sdlg-tray-2C.jpg') center/cover no-repeat;
@@ -242,16 +242,18 @@ nav {
   font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;
 }
 
-.intro-image { position: relative; }
-.intro-image-main {
-  width: 100%; aspect-ratio: 4/5;
+.intro-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.intro-img {
+  width: 100%; aspect-ratio: 1/1;
   object-fit: cover; border-radius: 2px; display: block;
 }
-.intro-image-accent {
-  position: absolute; bottom: -2rem; left: -2rem;
-  width: 45%; aspect-ratio: 1;
-  object-fit: cover; border-radius: 2px;
-  border: 5px solid var(--cream);
+.intro-img-wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 2/1;
 }
 
 .stat-row {
@@ -698,8 +700,10 @@ footer {
 }
 
 @media (max-width: 1000px) {
-  .intro { grid-template-columns: 1fr; gap: 3rem; }
-  .intro-image-accent { display: none; }
+  .intro { grid-template-columns: 1fr; gap: 2rem; }
+  .intro-images { grid-template-columns: repeat(3, 1fr); }
+  .intro-img { aspect-ratio: 1/1; }
+  .intro-img-wide { grid-column: auto; aspect-ratio: 1/1; }
 
   .featured-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .featured-section.compact .featured-inner { grid-template-columns: 1fr; }
