@@ -537,7 +537,7 @@ nav {
   padding: 6rem clamp(1.25rem, 3vw, 2.5rem);
   text-align: center;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 85%;
 }
 
 .newsletter-inner {
@@ -563,7 +563,8 @@ nav {
 }
 
 .newsletter-sub {
-  font-size: 1rem; font-weight: 300;
+  font-size: 1.15rem; 
+  font-weight: 300;
   color: rgba(253,248,242,0.78);
   line-height: 1.8;
   margin-bottom: 2.5rem;
