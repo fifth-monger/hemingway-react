@@ -204,7 +204,7 @@ nav {
 
 /* ─── SECTION LABELS ─── */
 .section-label {
-  font-size: 1.15rem; 
+  font-size: 1.05rem; 
   font-weight: 500;
   text-transform: uppercase; 
   letter-spacing: 0.2em;
@@ -240,7 +240,7 @@ nav {
 .intro-text p {
   color: var(--text-mid);
   margin-bottom: 1.2rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.85;
 }
 .intro-text .link-subtle {
@@ -275,8 +275,10 @@ nav {
   color: var(--bark-mid);
 }
 .stat span {
-  font-size: 1rem; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--text-light);
+  font-size: .9rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em; 
+  color: var(--text-light);
 }
 
 /* ─── FEATURED VARIETY ─── */
@@ -422,13 +424,13 @@ nav {
 }
 .pillar h3 {
   font-family: var(--serif);
-  font-size: 1.5rem; 
+  font-size: 1.25rem; 
   font-weight: 400;
   color: var(--bark-mid); 
   margin-bottom: 0.8rem;
 }
 .pillar p { 
-  font-size: 1.25rem; 
+  font-size: 1.10rem; 
   color: var(--text-mid); 
   line-height: 1.85; 
 }
@@ -632,11 +634,11 @@ nav {
 .review-stars { display: flex; gap: 3px; }
 .review-stars span { color: var(--gold); font-size: 0.9rem; }
 .review-text {
-  font-size: 1.25rem; 
+  font-size: 1.10rem; 
   color: var(--text-mid);
   line-height: 1.85;
-   font-style: italic;
-    flex: 1;
+  font-style: italic;
+  flex: 1;
 }
 .review-text::before { content: '\201C'; }
 .review-text::after  { content: '\201D'; }
@@ -655,14 +657,14 @@ nav {
   background: var(--bark); 
   color: var(--parchment);
   padding: 2.5rem 6rem; 
+  max-width: 55%;
   border-radius: 2px; margin-top: 1rem;
 }
 .review-cta-box p {
-  font-size: 1.25rem; 
+  font-size: 1.20rem; 
   color: rgba(240,232,216,0.75);
-  max-width: 460px; 
   line-height: 1.7;
-  margin: 1rem;
+  padding: 1rem 0;
 }
 
 /* ─── FOOTER ─── */
