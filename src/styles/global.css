@@ -719,6 +719,339 @@ footer {
   color: rgba(240,232,242,0.35);
 }
 
+/* ─── LEARN MORE (About page) ─── */
+.learn-more { background: var(--cream); }
+
+.lm-section { padding-top: 7rem; padding-bottom: 7rem; }
+
+.lm-about   { background: var(--cream); }
+.lm-climate { background: var(--parchment); }
+.lm-faq     { background: var(--cream); }
+
+.lm-heading {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3.12rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--bark);
+}
+
+.lm-prose p,
+.lm-intro-text {
+  font-size: 1.1rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  max-width: 720px;
+  margin-bottom: 1.4rem;
+}
+
+/* ── About Us 2-col layout ── */
+.lm-about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Photos go LEFT on desktop */
+.lm-about-photos { order: 1; }
+/* Text goes RIGHT on desktop */
+.lm-about-text   { order: 2; }
+
+.lm-about-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.lm-about-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.lm-about-photo-wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 2 / 1;
+}
+
+/* ── Climate photo strip ── */
+.lm-photo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.lm-photo-strip img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ── Zone Grid ── */
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.zone-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem 0.75rem;
+  background: white;
+  border: 1px solid rgba(90,70,53,0.1);
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.zone-card--ideal {
+  background: var(--bark);
+  border-color: var(--bark);
+}
+
+.zone-num {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--bark-mid);
+}
+.zone-card--ideal .zone-num { color: var(--gold-light); }
+
+.zone-f {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+.zone-card--ideal .zone-f { color: var(--parchment); }
+
+.zone-c {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+.zone-card--ideal .zone-c { color: rgba(240,232,216,0.6); }
+
+.zone-badge {
+  display: inline-block;
+  margin-top: 0.3rem;
+  background: var(--gold);
+  color: var(--bark);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* ── FAQ Accordion ── */
+.faq-list {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(90,70,53,0.12);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(90,70,53,0.12);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  color: var(--bark);
+  transition: color 0.2s;
+}
+.faq-question:hover { color: var(--gold); }
+
+.faq-icon {
+  font-size: 1.4rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.faq-answer {
+  padding: 0 0 1.5rem;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  max-width: 680px;
+}
+
+/* ─── VISIT PAGE ─── */
+.visit-page { background: var(--cream); }
+
+.vs-section { padding-top: 7rem; padding-bottom: 7rem; }
+
+.vs-heading {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3.12rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--bark);
+}
+
+/* ── Page Banner ── */
+.vs-banner {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Inner wrapper: bleeds past the container edges so rotation
+   never exposes white corners. Transform goes here, not on the img. */
+.vs-banner-inner {
+  position: absolute;
+  top: -18%;
+  left: -4%;
+  right: -4%;
+  bottom: -18%;
+  transform: rotate(1deg);
+}
+
+.vs-banner-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+/* ── Come See Us ── */
+.vs-come { background: var(--cream); }
+
+.vs-come-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.vs-note {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.vs-map iframe {
+  width: 100%;
+  height: 480px;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ── Tips for Visiting ── */
+.vs-tips { background: var(--parchment); }
+
+.vs-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.vs-tip-card {
+  padding: 0;
+  background: white;
+  border: 1px solid rgba(90,70,53,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.vs-tip-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.vs-tip-content {
+  padding: 1.75rem;
+}
+
+.vs-tip-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.vs-tip-card h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--bark-mid);
+  margin-bottom: 0.8rem;
+}
+
+.vs-tip-card p {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+/* ── While You're in the Area ── */
+.vs-area {
+  background: var(--sage);
+  color: var(--parchment);
+}
+
+.vs-area .vs-heading { color: var(--parchment); }
+
+.vs-area-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Image LEFT on desktop */
+.vs-area-img  { order: 1; }
+/* Text RIGHT on desktop */
+.vs-area-text { order: 2; }
+
+.vs-area-img img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.vs-area p {
+  font-size: 1.05rem;
+  color: rgba(240,232,216,0.85);
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1200px) {
   .nav-hamburger { display: flex; }
@@ -746,7 +1079,32 @@ footer {
   .review-cta-box { padding: 2rem 1.5rem; }
 
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  /* Learn More — About section: stack to 1 col, photos drop below text */
+  .lm-about-inner  { grid-template-columns: 1fr; gap: 3rem; }
+  .lm-about-photos { order: 2; }   /* photos move below text on mobile */
+  .lm-about-text   { order: 1; }
+
+  /* Learn More — Climate photo strip: 2 cols on tablet */
+  .lm-photo-strip { grid-template-columns: repeat(2, 1fr); }
+
+  /* Learn More — Zone grid */
+  .zone-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Visit page */
+  .vs-banner       { height: 150px; }
+  .vs-come-inner   { grid-template-columns: 1fr; gap: 3rem; }
+  .vs-tips-grid    { grid-template-columns: 1fr; gap: 1.5rem; }
+  .vs-area-inner   { grid-template-columns: 1fr; gap: 3rem; }
+  .vs-area-text    { order: 1; }   /* text on top */
+  .vs-area-img     { order: 2; }   /* image below */
 }
+
+@media (max-width: 600px) {
+  /* Learn More */
+  .zone-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 560px) {
   .footer-inner { grid-template-columns: 1fr; }
   .stat-row { gap: 1.5rem; }

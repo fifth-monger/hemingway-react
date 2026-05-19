@@ -12,9 +12,9 @@ export default function Nav() {
         </Link>
 
         <ul className="nav-links">
-          <li><NavLink to="/about">Our Story</NavLink></li>
-          <li><NavLink to="/varieties">2026 Varieties</NavLink></li>
-          <li><NavLink to="/about#visit">Visit &amp; Hours</NavLink></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">Learn More</NavLink></li>
+          <li><NavLink to="/visit">Visit Us</NavLink></li>
           {/* TODO: Replace # with Square store URL */}
           <li><a href="#" className="nav-cta">Shop Daylilies</a></li>
         </ul>
@@ -31,9 +31,9 @@ export default function Nav() {
       </div>
 
       <div className={`nav-mobile${open ? ' open' : ''}`}>
-        <NavLink to="/about" onClick={() => setOpen(false)}>Our Story</NavLink>
-        <NavLink to="/varieties" onClick={() => setOpen(false)}>2026 Varieties</NavLink>
-        <NavLink to="/about#visit" onClick={() => setOpen(false)}>Visit &amp; Hours</NavLink>
+        <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
+        <NavLink to="/about" onClick={() => setOpen(false)}>Learn More</NavLink>
+        <NavLink to="/visit" onClick={() => setOpen(false)}>Visit Us</NavLink>
         {/* TODO: Replace # with Square store URL */}
         <a href="#" className="nav-cta" onClick={() => setOpen(false)}>Shop Daylilies</a>
       </div>

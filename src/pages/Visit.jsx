@@ -1,12 +1,12 @@
 import Nav from '../components/Nav'
-import LearnMore from '../components/LearnMore'
+import VisitSection from '../components/VisitSection'
 import Footer from '../components/Footer'
 
-export default function About() {
+export default function Visit() {
   return (
     <>
       <Nav />
-      <LearnMore />
+      <VisitSection />
       <Footer />
     </>
   )
