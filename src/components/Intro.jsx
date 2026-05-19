@@ -36,19 +36,19 @@ export default function Intro() {
 
         <div className="intro-images">
           <img
-            src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
+            src="src/images/Blackthorne-HR.jpg"
+            alt="Blackthorn daylily"
+            className="intro-img"
+          />
+          <img
+            src="src/images/FEATHERED.jpg"
             alt="Daylily in bloom"
             className="intro-img"
           />
           <img
-            src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
-            alt="Daylily in bloom"
-            className="intro-img"
-          />
-          <img
-            src="https://roycroftdaylilies.com/files/image/Dream%20Souffle.jpg"
-            alt="Daylily in bloom"
-            className="intro-img intro-img-wide"
+            src="src/images/Carolina-Dreaming-Clump-3.jpg"
+            alt="Carolina Dreaming daylily"
+            className="intro-img  intro-img-wide"
           />
         </div>
       </div>
