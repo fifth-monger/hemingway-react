@@ -54,11 +54,11 @@ export default function VisitSection() {
                 </div>
                 <div className="contact-item">
                   <span className="ckey">Address</span>
-                  <span>Hemingway, South Carolina<br />53 mi west of Myrtle Beach</span>
+                  <span>3954 Hemingway Hwy <br /> Hemingway, South Carolina<br /><em><small>53 mi west of Myrtle Beach</small></em></span>
                 </div>
                 <div className="contact-item">
                   <span className="ckey">Email</span>
-                  <span><a href="mailto:roycroftdaylilies@gmail.com">roycroftdaylilies@gmail.com</a></span>
+                  <span><a href="mailto:info@hemingwaydaylilies.com">info@hemingwaynursery.com</a></span>
                 </div>
               </div>
             </div>
@@ -94,7 +94,6 @@ export default function VisitSection() {
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
-                <span className="vs-tip-icon">🛒</span>
                 <h3>Wagons available</h3>
                 <p>
                   We keep wagons on hand so you can load up without hauling plants
@@ -111,7 +110,6 @@ export default function VisitSection() {
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
-                <span className="vs-tip-icon">🪴</span>
                 <h3>Shop container plants</h3>
                 <p>
                   In addition to bare-root, we carry potted daylilies during the
@@ -128,7 +126,6 @@ export default function VisitSection() {
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
-                <span className="vs-tip-icon">🌿</span>
                 <h3>Walk the display beds</h3>
                 <p>
                   Our 40 raised display beds are an AHS National Display Garden.

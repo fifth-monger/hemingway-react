@@ -204,7 +204,7 @@ nav {
 
 /* ─── SECTION LABELS ─── */
 .section-label {
-  font-size: 1.05rem; 
+  font-size: 1.15rem; 
   font-weight: 500;
   text-transform: uppercase; 
   letter-spacing: 0.2em;
@@ -214,7 +214,7 @@ nav {
 
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 3.12rem);
+  font-size: clamp(2rem, 3.5vw, 3.36rem);
   font-weight: 400;
   line-height: 1.25;
   margin-bottom: 0.5rem;
@@ -395,7 +395,7 @@ nav {
 }
 .newsletter-heading {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 3.36rem);
   font-weight: 400;
   color: #fdf8f2;
   line-height: 1.2;
@@ -594,23 +594,45 @@ nav {
   gap: 5rem; align-items: start;
 }
 
-.hours-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+.hours-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 1.5rem; 
+}
 .hours-table td {
-  padding: 0.7rem 0; font-size: 0.9rem;
+  padding: 0.7rem 0; 
+  font-size: 1.10rem;
   border-bottom: 1px solid rgba(90,70,53,0.1);
 }
 .hours-table td:first-child { color: var(--text-light); font-weight: 400; padding-right: 2rem; }
 .hours-table td:last-child  { color: var(--bark-mid); font-weight: 500; }
 
-.contact-block { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-.contact-item { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 0.9rem; }
-.contact-item .ckey {
-  min-width: 70px; color: var(--text-light);
-  font-size: 0.75rem; text-transform: uppercase;
-  letter-spacing: 0.08em; padding-top: 0.1rem;
+.contact-block { 
+  margin-top: 2.5rem; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.8rem; 
 }
-.contact-item a { color: var(--gold); text-decoration: none; }
-.contact-item a:hover { text-decoration: underline; }
+.contact-item { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 0.8rem; 
+  font-size: 1.15rem; }
+.contact-item .ckey {
+  min-width: 70px; 
+  color: var(--text-light);
+  font-size: 0.85rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.08em; 
+  padding-top: 0.1rem;
+}
+.contact-item a { 
+  color: var(--gold); 
+  text-decoration: none; 
+}
+.contact-item a:hover { 
+  text-decoration: underline; 
+}
 
 .guarantee-box {
   margin-top: 3rem;
@@ -909,7 +931,7 @@ footer {
 
 .vs-heading {
   font-family: var(--serif);
-  font-size: clamp(2rem, 3.5vw, 3.12rem);
+  font-size: clamp(2rem, 3.5vw, 3.36rem);
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -954,11 +976,11 @@ footer {
 }
 
 .vs-note {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--text-mid);
   line-height: 1.85;
   margin-bottom: 2rem;
-  max-width: 480px;
+  max-width: 90%;
 }
 
 .vs-map iframe {
@@ -966,6 +988,7 @@ footer {
   height: 480px;
   border-radius: 2px;
   display: block;
+
 }
 
 /* ── Tips for Visiting ── */
