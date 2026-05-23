@@ -9,8 +9,8 @@ export default function Hero() {
           Where <em>every bloom</em> is grown with intention
         </h1>
         <p className="hero-sub">
-          Homegrown daylilies from our fields to your garden. Hundreds of cultivars,
-          generations of care, and a 1-year guarantee on every plant.
+          Homegrown daylilies from our fields to your garden — hundreds of cultivars
+          and a 1-year guarantee on every plant.
         </p>
         <div className="hero-actions">
           {/* TODO: Replace # with Square store URL */}

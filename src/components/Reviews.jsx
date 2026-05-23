@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const REVIEWS = [
   {
     text: "The plants arrived huge and healthy — two fans each, just like they promised. I've ordered from other nurseries and nothing compares. Blackthorne is already blooming in its first season.",
@@ -14,6 +16,11 @@ const REVIEWS = [
 ]
 
 export default function Reviews() {
+  const [current, setCurrent] = useState(0)
+
+  function prev() { setCurrent(c => (c - 1 + REVIEWS.length) % REVIEWS.length) }
+  function next() { setCurrent(c => (c + 1) % REVIEWS.length) }
+
   return (
     <section className="reviews-section" id="reviews">
       <div className="container">
@@ -22,16 +29,29 @@ export default function Reviews() {
           Happy gardeners, healthy daylilies
         </h2>
 
-        <div className="reviews-grid">
-          {REVIEWS.map(r => (
-            <div key={r.author} className="review-card">
-              <div className="review-stars">
-                {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
+        <div className="reviews-scroll-wrapper">
+          <div className="reviews-grid">
+            {REVIEWS.map((r, i) => (
+              <div key={r.author} className={`review-card${i === current ? ' review-card--active' : ''}`}>
+                <div className="review-stars">
+                  {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
+                </div>
+                <p className="review-text">{r.text}</p>
+                <p className="review-author">{r.author}</p>
               </div>
-              <p className="review-text">{r.text}</p>
-              <p className="review-author">{r.author}</p>
+            ))}
+          </div>
+
+          {/* Mobile carousel nav — hidden on desktop via CSS */}
+          <div className="reviews-carousel-nav">
+            <button className="reviews-arrow" onClick={prev} aria-label="Previous review">&#8249;</button>
+            <div className="reviews-dots">
+              {REVIEWS.map((_, i) => (
+                <span key={i} className={`reviews-dot${i === current ? ' reviews-dot--active' : ''}`} />
+              ))}
             </div>
-          ))}
+            <button className="reviews-arrow" onClick={next} aria-label="Next review">&#8250;</button>
+          </div>
         </div>
 
         <div className="review-cta-box">
@@ -39,8 +59,7 @@ export default function Reviews() {
             Enjoyed your daylilies?
           </h3>
           <p>
-            We'd love to hear about your garden. Leaving a review helps other gardeners find
-            us and means the world to our small family nursery.
+            Leaving a review helps other gardeners find us — and means the world to our small family nursery.
           </p>
           <a
             href="https://g.page/HemingwayNursery/review?rc"

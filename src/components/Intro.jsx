@@ -4,16 +4,15 @@ export default function Intro() {
       <div className="container intro">
         <div className="intro-text">
           <p className="section-label">About the Nursery</p>
-          <h2 className="serif">Quality daylilies, homegrown in our fields.</h2>
+          <h2 className="serif">Grown here. Shipped fresh. Guaranteed.</h2>
           <p>
-            At Hemingway Nursery, we live where we work — our home is right here among the fields.
-            Every daylily is individually grown and nurtured until it's ready to ship or meet you
-            in person. We love talking about daylilies, and we welcome every question.
+            At Hemingway Nursery, we live where we work — every daylily is grown and
+            nurtured until it's ready to ship or meet you in person. We love talking
+            about daylilies, and we welcome every question.
           </p>
           <p>
             We ship bare-root within 24 hours of harvest, manicured and treated, so you receive
-            large, healthy plants ready for your garden. Unlike some nurseries, we never upcharge
-            for card payments — and your credit card isn't charged until the week of shipment.
+            large, healthy plants ready for your garden.
           </p>
           <div className="stat-row">
             <div className="stat">

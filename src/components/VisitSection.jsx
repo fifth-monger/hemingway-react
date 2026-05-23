@@ -6,7 +6,7 @@ export default function VisitSection() {
       <div className="vs-banner">
         <div className="vs-banner-inner">
           <img
-            src="src/images/nursery-shade-beds.jpg"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/177/original/May_29-8.JPG?1779385784"
             alt="Container daylilies under the shade structure at Hemingway Nursery"
           />
         </div>
@@ -96,16 +96,14 @@ export default function VisitSection() {
               <div className="vs-tip-content">
                 <h3>Wagons available</h3>
                 <p>
-                  We keep wagons on hand so you can load up without hauling plants
-                  by hand across the property. Grab one at the entrance and bring
-                  home as many as you like.
+                  Grab a wagon at the entrance and load up — no hauling plants by hand across the property.
                 </p>
               </div>
             </div>
 
             <div className="vs-tip-card">
               <img
-                src="src/images/misc-sdlg-tray.jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/182/original/Forestlake_Ragamuffin_Clump.JPG?1779388720"
                 alt="Daylily seedling trays"
                 className="vs-tip-photo"
               />
@@ -128,9 +126,8 @@ export default function VisitSection() {
               <div className="vs-tip-content">
                 <h3>Walk the display beds</h3>
                 <p>
-                  Our 40 raised display beds are an AHS National Display Garden.
-                  Every cultivar is labeled with the hybridizer's name — walk the
-                  rows, take your time, and let the plants speak for themselves.
+                  Forty raised display beds, every cultivar labeled. Walk the rows,
+                  take your time, and let the plants speak for themselves.
                 </p>
               </div>
             </div>
@@ -148,16 +145,10 @@ export default function VisitSection() {
               <p className="section-label" style={{ color: 'var(--gold-light)' }}>Worth the Detour</p>
               <h2 className="vs-heading" style={{ color: 'var(--parchment)' }}>While you're in the area.</h2>
               <p>
-                If you're making the drive to Hemingway, leave room for lunch.
                 Scott's Bar-B-Que is just down the road — a South Carolina institution
                 that's been smoking whole hogs over wood coals since 1972. It's the kind
                 of place food writers travel across the country to visit. Plan your trip
                 around it.
-              </p>
-              <p>
-                Hemingway is a quiet, unhurried corner of the state, 53 miles west of
-                Myrtle Beach and 83 miles north of Charleston — close enough to either
-                for a full day out.
               </p>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=2734+Hemingway+Hwy+Hemingway+SC+29554"

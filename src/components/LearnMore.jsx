@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const ZONES = [
   { zone: '3', f: '-40 to -30°F', c: '-40 to -34°C' },
@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: 'What is a diploid vs. tetraploid?',
-    a: 'The difference is chromosomes. Diploids have 22; tetraploids have 44. In practice, tetraploids often produce larger, more richly colored blooms with thicker petals, while diploids tend toward finer, more graceful forms. Hybridizers cross within each type — diploids with diploids, tetraploids with tetraploids.',
+    a: 'The difference is chromosomes. Diploids have 22; tetraploids have 44. In practice, tetraploids often produce larger, more richly colored blooms with thicker petals, while diploids tend toward finer, more graceful forms.',
   },
   {
     q: 'What is a rebloomer?',
@@ -37,12 +37,38 @@ const FAQS = [
   },
   {
     q: 'Do you offer gift certificates?',
-    a: 'Yes. Daylilies make a wonderful gift, and our gift certificates are available in any amount. Call Scott at 919-306-4230 or purchase one directly through the online store.',
+    a: 'Yes — gift certificates are available in any amount. Call Scott at 919-306-4230 or purchase one directly through the online store.',
   },
 ]
 
 export default function LearnMore() {
   const [openIndex, setOpenIndex] = useState(null)
+  const zoneRef = useRef(null)
+  const [canScrollLeft, setCanScrollLeft]   = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  function checkScroll() {
+    const el = zoneRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 0)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1)
+  }
+
+  useEffect(() => {
+    const el = zoneRef.current
+    if (!el) return
+    checkScroll()
+    el.addEventListener('scroll', checkScroll)
+    window.addEventListener('resize', checkScroll)
+    return () => {
+      el.removeEventListener('scroll', checkScroll)
+      window.removeEventListener('resize', checkScroll)
+    }
+  }, [])
+
+  function scrollZones(dir) {
+    zoneRef.current?.scrollBy({ left: dir * 160, behavior: 'smooth' })
+  }
 
   function toggle(i) {
     setOpenIndex(openIndex === i ? null : i)
@@ -63,9 +89,8 @@ export default function LearnMore() {
                 <p>
                   Hemingway Nursery sits in Hemingway, South Carolina — 53 miles west of Myrtle Beach
                   and 83 miles north of Charleston. Scott and Lucille Williams have made this place their
-                  home and their livelihood, carrying on a tradition that began under the name Roycroft
-                  Daylilies in Georgetown before relocating to its current address and opening to the
-                  public in March 2020.
+                  home and their livelihood. The nursery began as Roycroft Daylilies in Georgetown,
+                  relocated to its current address, and opened to the public in March 2020.
                 </p>
                 <p>
                   The nursery holds official status as an American Hemerocallis Society National Display
@@ -87,19 +112,20 @@ export default function LearnMore() {
 
             <div className="lm-about-photos">
               <img
-                src="src/images/misc-Bob-hybridizing.jpg"
-                alt="Bob Roycroft hybridizing daylilies"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/206/original/Pee_Dee_Farmers_Market_Spring_Flower_Festival-2024.JPG?1779512749"
+                alt="Pee Dee Farmers Market Spring Flower Festival 2024"
+                className="lm-about-photo lm-about-photo-wide"
+                style={{ objectPosition: 'left top' }}
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/178/original/Under_the_Magnolia.jpeg?1779386089"
+                alt="Daylilies under the magnolia at Hemingway Nursery"
                 className="lm-about-photo"
               />
               <img
                 src="src/images/nursery-sign.jpg"
                 alt="Hemingway Nursery sign"
                 className="lm-about-photo"
-              />
-              <img
-                src="src/images/misc-drying-rack.jpg"
-                alt="Bare-root daylilies on the drying rack"
-                className="lm-about-photo lm-about-photo-wide"
               />
             </div>
 
@@ -116,7 +142,7 @@ export default function LearnMore() {
             Daylilies are tough plants, performing reliably from Zone 3 winters that dip to -40°F
             all the way through the mild winters of Zone 9. Zones 7 and 8 are the sweet spot —
             every cultivar in our catalog should thrive for you there. Outside those zones,
-            each individual listing shows its recommended range.
+            each listing shows its recommended range.
           </p>
           <p className="lm-intro-text">
             Our zone ratings are intentionally conservative. We based them on consistent real-world
@@ -124,49 +150,82 @@ export default function LearnMore() {
             mulching that can mask a marginal zone. If a listing says Zone 6, it means Zone 6
             with no safety net.
           </p>
-          <div className="lm-photo-strip">
-            <img src="src/images/Pardon-Me-Clump.jpg"           alt="Pardon Me daylily clump in bloom" />
-            <img src="src/images/Blackthorne-HR.jpg"            alt="Blackthorne daylily" />
-            <img src="src/images/FEATHERED.jpg"                 alt="Feathered daylily bloom" />
-            <img src="src/images/Carolina-Dreaming-Clump-3.jpg" alt="Carolina Dreaming daylily clump" />
+          <p className="zone-temp-note">Minimum winter temperature per zone</p>
+          <div className="zone-scroll-wrapper">
+            {canScrollLeft && (
+              <button className="zone-arrow zone-arrow--left" onClick={() => scrollZones(-1)} aria-label="Scroll left">&#8249;</button>
+            )}
+            <div className="zone-grid" ref={zoneRef} onScroll={checkScroll}>
+              {ZONES.map(z => (
+                <div key={z.zone} className={`zone-card${z.ideal ? ' zone-card--ideal' : ''}`}>
+                  <span className="zone-num">Zone {z.zone}</span>
+                  <span className="zone-f">{z.f}</span>
+                  {z.ideal && <span className="zone-badge">Ideal</span>}
+                </div>
+              ))}
+            </div>
+            {canScrollRight && (
+              <button className="zone-arrow zone-arrow--right" onClick={() => scrollZones(1)} aria-label="Scroll right">&#8250;</button>
+            )}
           </div>
-
-          <div className="zone-grid">
-            {ZONES.map(z => (
-              <div key={z.zone} className={`zone-card${z.ideal ? ' zone-card--ideal' : ''}`}>
-                <span className="zone-num">Zone {z.zone}</span>
-                <span className="zone-f">{z.f}</span>
-                <span className="zone-c">{z.c}</span>
-                {z.ideal && <span className="zone-badge">Ideal</span>}
-              </div>
-            ))}
-          </div>
+          <p className="zone-swipe-hint">Swipe to explore all zones →</p>
         </div>
       </section>
 
       {/* ── FAQ ── */}
       <section className="lm-section lm-faq">
         <div className="container">
-          <p className="section-label">Common Questions</p>
-          <h2 className="lm-heading">FAQ</h2>
-          <div className="faq-list">
-            {FAQS.map((item, i) => (
-              <div key={i} className={`faq-item${openIndex === i ? ' open' : ''}`}>
-                <button
-                  className="faq-question"
-                  onClick={() => toggle(i)}
-                  aria-expanded={openIndex === i}
-                >
-                  <span>{item.q}</span>
-                  <span className="faq-icon" aria-hidden="true">
-                    {openIndex === i ? '−' : '+'}
-                  </span>
-                </button>
-                {openIndex === i && (
-                  <p className="faq-answer">{item.a}</p>
-                )}
+          <div className="faq-inner">
+
+            {/* Column 1: label + heading + accordion */}
+            <div className="faq-main">
+              <p className="section-label">Common Questions</p>
+              <h2 className="lm-heading">FAQ</h2>
+              <div className="faq-list">
+              {FAQS.map((item, i) => (
+                <div key={i} className={`faq-item${openIndex === i ? ' open' : ''}`}>
+                  <button
+                    className="faq-question"
+                    onClick={() => toggle(i)}
+                    aria-expanded={openIndex === i}
+                  >
+                    <span>{item.q}</span>
+                    <span className="faq-icon" aria-hidden="true">
+                      {openIndex === i ? '−' : '+'}
+                    </span>
+                  </button>
+                  {openIndex === i && (
+                    <p className="faq-answer">{item.a}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+            </div>{/* end faq-main */}
+
+            {/* Column 2: sidebar */}
+            <aside className="faq-sidebar">
+              <div className="faq-sidebar-card">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/205/original/IMG_1071.JPG?1779512532"
+                  alt="Bob Roycroft working in the field"
+                  className="faq-sidebar-photo"
+                />
+                <div className="faq-sidebar-body">
+                  <h3 className="faq-sidebar-heading">Still have questions?</h3>
+                  <p className="faq-sidebar-text">
+                    Scott loves talking daylilies. Give him a call or shoot an email
+                    — no question is too small.
+                  </p>
+                  <a href="tel:9193064230" className="faq-sidebar-phone">
+                    919-306-4230
+                  </a>
+                  <a href="mailto:info@hemingwaynursery.com" className="faq-sidebar-email">
+                    info@hemingwaynursery.com
+                  </a>
+                </div>
               </div>
-            ))}
+            </aside>
+
           </div>
         </div>
       </section>
