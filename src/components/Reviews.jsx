@@ -2,16 +2,16 @@ import { useState } from 'react'
 
 const REVIEWS = [
   {
-    text: "The plants arrived huge and healthy — two fans each, just like they promised. I've ordered from other nurseries and nothing compares. Blackthorne is already blooming in its first season.",
-    author: 'Margaret T. — Virginia',
+    text: "Visited for the first time and was impressed with the overall selection and variety of beautiful day lilies — what I had seen on the website was well represented on site. The owners (Lucille and Scott) were friendly, attentive, and answered any questions I had...",
+    author: '--- Cliff Barfield',
   },
   {
-    text: "Scott and Lucille are the most knowledgeable, genuinely kind people. Called with questions about zone compatibility and they talked with me for 20 minutes. Rare to find that anymore.",
-    author: 'Dale R. — North Carolina',
+    text: "Even though bloom season is largely done in SC, there were quite a few flowers including a stunning bed of South Seas. Thanks for the friendly service in this stifling heat. I look forward to returning next bloom season to see the garden in full bloom!",
+    author: '--- MichaelE Williams',
   },
   {
-    text: "Third year ordering from Hemingway Nursery. My garden has been transformed. The Roycroft introductions are stunning — you can't find these cultivars just anywhere.",
-    author: 'Susan M. — Georgia',
+    text: "My visit to Hemingway Nursery was absolutely wonderful. They were so helpful and happy to share their knowledge when I had so many questions about growing day lilies. The whole atmosphere was tranquil serenity with so many varieties to choose from...",
+    author: '--- Carol Conahan',
   },
 ]
 

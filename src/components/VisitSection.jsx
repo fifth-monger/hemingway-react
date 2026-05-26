@@ -54,7 +54,7 @@ export default function VisitSection() {
                 </div>
                 <div className="contact-item">
                   <span className="ckey">Address</span>
-                  <span>3954 Hemingway Hwy <br /> Hemingway, South Carolina<br /><em><small>53 mi west of Myrtle Beach</small></em></span>
+                  <span>3954 Hemingway Hwy <br /> Hemingway, South Carolina</span>
                 </div>
                 <div className="contact-item">
                   <span className="ckey">Email</span>

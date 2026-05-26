@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="hero-actions">
           {/* TODO: Replace # with Square store URL */}
           <a href="#" className="btn btn-primary">Browse Our Daylilies</a>
-          <Link to="/about#visit" className="btn btn-outline">Plan Your Visit</Link>
+          <Link to="/visit" className="btn btn-outline">Plan Your Visit</Link>
         </div>
       </div>
       <span className="scroll-hint">Scroll</span>
