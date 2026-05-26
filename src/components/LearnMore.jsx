@@ -112,18 +112,18 @@ export default function LearnMore() {
 
             <div className="lm-about-photos">
               <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/206/original/Pee_Dee_Farmers_Market_Spring_Flower_Festival-2024.JPG?1779512749"
+                src="/images/pee-dee-farmers-market.jpg"
                 alt="Pee Dee Farmers Market Spring Flower Festival 2024"
                 className="lm-about-photo lm-about-photo-wide"
                 style={{ objectPosition: 'left top' }}
               />
               <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/178/original/Under_the_Magnolia.jpeg?1779386089"
+                src="/images/under-the-magnolia.jpg"
                 alt="Daylilies under the magnolia at Hemingway Nursery"
                 className="lm-about-photo"
               />
               <img
-                src="src/images/nursery-sign.jpg"
+                src="/images/nursery-sign.jpg"
                 alt="Hemingway Nursery sign"
                 className="lm-about-photo"
               />
@@ -206,7 +206,7 @@ export default function LearnMore() {
             <aside className="faq-sidebar">
               <div className="faq-sidebar-card">
                 <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/205/original/IMG_1071.JPG?1779512532"
+                  src="/images/bob-roycroft-field.jpg"
                   alt="Bob Roycroft working in the field"
                   className="faq-sidebar-photo"
                 />

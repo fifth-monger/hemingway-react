@@ -169,7 +169,7 @@ nav {
   min-height: calc(100vh - 60px);
   background:
     linear-gradient(to bottom, rgba(42,30,20,0.77) 0%, rgba(42,30,20,0.60) 60%, rgba(42,30,20,0.87) 100%),
-    url('https://roycroftdaylilies.com/files/image/misc-05-sdlg-tray-2C.jpg') center/cover no-repeat;
+    url('/images/sdlg-tray-hero.jpg') center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: center;
   position: relative;
 }
@@ -359,7 +359,7 @@ nav {
 .newsletter-bg {
   background:
     linear-gradient(to bottom, rgba(42,30,20,0.82) 0%, rgba(42,30,20,0.88) 100%),
-    url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/149/original/Pardon-Me-Clump.jpg?1779150710') center/cover no-repeat;
+    url('/images/pardon-me-clump.jpg') center/cover no-repeat;
   padding: 6rem clamp(1.25rem, 3vw, 2.5rem);
   text-align: center;
   margin: 0 auto;
@@ -497,7 +497,7 @@ nav {
 .lm-climate {
   background:
     linear-gradient(rgba(30,20,12,0.80), rgba(30,20,12,0.80)),
-    url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/180/original/Nursery_Picture_2.JPG?1779387543') center/cover no-repeat;
+    url('/images/nursery-picture-2.jpg') center/cover no-repeat;
 }
 .lm-climate { text-align: center; }
 .lm-climate .lm-heading    { color: var(--parchment); }

@@ -6,7 +6,7 @@ export default function VisitSection() {
       <div className="vs-banner">
         <div className="vs-banner-inner">
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/177/original/May_29-8.JPG?1779385784"
+            src="/images/may-29-daylilies.jpg"
             alt="Container daylilies under the shade structure at Hemingway Nursery"
           />
         </div>
@@ -89,7 +89,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="src/images/making-room.jpg"
+                src="/images/making-room.jpg"
                 alt="Nursery beds being prepared"
                 className="vs-tip-photo"
               />
@@ -103,7 +103,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/182/original/Forestlake_Ragamuffin_Clump.JPG?1779388720"
+                src="/images/forestlake-ragamuffin.jpg"
                 alt="Daylily seedling trays"
                 className="vs-tip-photo"
               />
@@ -119,7 +119,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="src/images/daylily-beds-winter.jpg"
+                src="/images/daylily-beds-winter.jpg"
                 alt="The 40 raised display beds at Hemingway Nursery"
                 className="vs-tip-photo"
               />
@@ -163,7 +163,7 @@ export default function VisitSection() {
 
             <div className="vs-area-img">
               <img
-                src="src/images/maxresdefault.jpg"
+                src="/images/maxresdefault.jpg"
                 alt="Scott's Bar-B-Que in Hemingway, SC"
               />
             </div>
