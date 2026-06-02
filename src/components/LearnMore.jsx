@@ -100,33 +100,32 @@ export default function LearnMore() {
                   and we carry varieties you won't find just anywhere.
                 </p>
                 <p>
-                  Over the years, Hemingway Nursery has introduced original daylilies for five hybridizers:
-                  Cindy Cribb, Bob Roycroft, Bob Roycroft Jr., Lucille Williams, and Wyatt LeFevre —
-                  whose introductions carry the "FORSYTH" prefix and were developed in Kernersville, NC.
-                  Select Roycroft introductions from 2009 through 2023 remain available, including the
-                  2023 variety named for Lucille Williams herself. Scott and Lucille love what they do,
-                  and it shows in every plant that leaves these fields.
+                 Scott and Lucille love what they do, and it shows in every plant that leaves these fields.
                 </p>
               </div>
             </div>
 
             <div className="lm-about-photos">
-              <img
-                src="/images/pee-dee-farmers-market.jpg"
-                alt="Pee Dee Farmers Market Spring Flower Festival 2024"
-                className="lm-about-photo lm-about-photo-wide"
-                style={{ objectPosition: 'left top' }}
-              />
-              <img
-                src="/images/under-the-magnolia.jpg"
-                alt="Daylilies under the magnolia at Hemingway Nursery"
-                className="lm-about-photo"
-              />
-              <img
-                src="/images/nursery-sign.jpg"
-                alt="Hemingway Nursery sign"
-                className="lm-about-photo"
-              />
+              {/* lm-about-photos-grid is absolutely positioned so it fills
+                  the text column height without contributing its own intrinsic size */}
+              <div className="lm-about-photos-grid">
+                <img
+                  src="/images/pee-dee-farmers-market.jpg"
+                  alt="Pee Dee Farmers Market Spring Flower Festival 2024"
+                  className="lm-about-photo lm-about-photo-wide"
+                  style={{ objectPosition: 'left top' }}
+                />
+                <img
+                  src="/images/under-the-magnolia.jpg"
+                  alt="Daylilies under the magnolia at Hemingway Nursery"
+                  className="lm-about-photo"
+                />
+                <img
+                  src="/images/nursery-sign.jpg"
+                  alt="Hemingway Nursery sign"
+                  className="lm-about-photo"
+                />
+              </div>
             </div>
 
           </div>

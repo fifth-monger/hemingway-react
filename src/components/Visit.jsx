@@ -7,7 +7,7 @@ export default function Visit() {
         <h2 className="serif" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', marginBottom: '1rem', color: 'var(--bark)' }}>
           Hours &amp; Getting Here
         </h2>
-        <p style={{ color: 'var(--text-mid)', fontSize: '0.92rem', maxWidth: '420px' }}>
+        <p style={{ color: 'var(--text-mid)', fontSize: '1.045rem', maxWidth: '420px' }}>
           We live at the nursery, so if you'd like to visit outside scheduled hours, just call
           ahead. We're happy to accommodate when we're around.
         </p>

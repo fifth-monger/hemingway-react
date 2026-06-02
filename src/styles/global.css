@@ -194,7 +194,7 @@ nav {
 .hero-title em { font-style: italic; color: var(--gold-light); }
 
 .hero-sub {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 300;
   color: rgba(253,248,242,0.85);
   max-width: 480px;
@@ -247,7 +247,7 @@ nav {
 .intro-text p {
   color: var(--text-mid);
   margin-bottom: 1.2rem;
-  font-size: 1.15rem;
+  font-size: 1.275rem;
   line-height: 1.85;
 }
 .intro-text .link-subtle {
@@ -312,7 +312,7 @@ nav {
 .review-stars { display: flex; gap: 3px; }
 .review-stars span { color: var(--gold); font-size: 0.9rem; }
 .review-text {
-  font-size: 1.10rem;
+  font-size: 1.225rem;
   color: var(--text-mid);
   line-height: 1.85;
   font-style: italic;
@@ -344,7 +344,7 @@ nav {
   margin-top: 1rem;
 }
 .review-cta-box p {
-  font-size: 1.20rem;
+  font-size: 1.325rem;
   color: rgba(240,232,216,0.75);
   line-height: 1.7;
   padding: 1rem 0;
@@ -357,9 +357,10 @@ nav {
   padding: 4rem 0;
 }
 .newsletter-bg {
+  /* TODO: Replace image path below with new newsletter background image (drop file in public/images/) */
   background:
     linear-gradient(to bottom, rgba(42,30,20,0.82) 0%, rgba(42,30,20,0.88) 100%),
-    url('/images/pardon-me-clump.jpg') center/cover no-repeat;
+    url('REPLACE_WITH_NEW_IMAGE_PATH') center/cover no-repeat;
   padding: 6rem clamp(1.25rem, 3vw, 2.5rem);
   text-align: center;
   margin: 0 auto;
@@ -385,7 +386,7 @@ nav {
   margin-bottom: 1rem;
 }
 .newsletter-sub {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 300;
   color: rgba(253,248,242,0.78);
   line-height: 1.8;
@@ -452,7 +453,7 @@ nav {
 
 .lm-prose p,
 .lm-intro-text {
-  font-size: 1.1rem;
+  font-size: 1.225rem;
   color: var(--text-mid);
   line-height: 1.9;
   margin-bottom: 1.4rem;
@@ -469,27 +470,39 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: center;
+  align-items: stretch; /* text drives row height; photo column stretches to match */
 }
 
 .lm-about-photos { order: 1; } /* photos LEFT on desktop */
 .lm-about-text   { order: 2; } /* text RIGHT on desktop */
 
+/* Positioning anchor — no intrinsic height so it can't push the row taller than text */
 .lm-about-photos {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Absolutely fills the anchor, so photos match text column height exactly */
+.lm-about-photos-grid {
+  position: absolute;
+  inset: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 0.5rem;
 }
+
 .lm-about-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
+  min-height: 0;
   object-fit: cover;
   border-radius: 2px;
   display: block;
 }
 .lm-about-photo-wide {
   grid-column: 1 / -1;
-  aspect-ratio: 2 / 1;
 }
 
 
@@ -607,7 +620,7 @@ nav {
 }
 .faq-answer {
   padding: 0 0 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1.175rem;
   color: var(--text-mid);
   line-height: 1.9;
 }
@@ -634,7 +647,7 @@ nav {
   margin-bottom: 0.25rem;
 }
 .faq-sidebar-text {
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   color: rgba(240,232,216,0.75);
   line-height: 1.8;
   margin-bottom: 0.5rem;
@@ -651,7 +664,7 @@ nav {
 .faq-sidebar-phone:hover { color: var(--gold-light); }
 .faq-sidebar-email {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   color: rgba(240,232,216,0.5);
   text-decoration: none;
   text-transform: lowercase;
@@ -719,7 +732,7 @@ nav {
 }
 
 .vs-note {
-  font-size: 1.15rem;
+  font-size: 1.275rem;
   color: var(--text-mid);
   line-height: 1.85;
   margin-bottom: 2rem;
@@ -740,7 +753,7 @@ nav {
 }
 .hours-table td {
   padding: 0.7rem 0;
-  font-size: 1.10rem;
+  font-size: 1.225rem;
   border-bottom: 1px solid rgba(90,70,53,0.1);
 }
 .hours-table td:first-child { color: var(--text-light); font-weight: 400; padding-right: 2rem; }
@@ -752,7 +765,7 @@ nav {
 }
 .contact-item {
   display: flex; align-items: flex-start; gap: 0.8rem;
-  font-size: 1.15rem;
+  font-size: 1.275rem;
 }
 .contact-item .ckey {
   min-width: 70px;
@@ -795,7 +808,7 @@ nav {
   margin-bottom: 0.8rem;
 }
 .vs-tip-card p {
-  font-size: 0.95rem;
+  font-size: 1.075rem;
   color: var(--text-mid);
   line-height: 1.85;
 }
@@ -825,7 +838,7 @@ nav {
   display: block;
 }
 .vs-area p {
-  font-size: 1.05rem;
+  font-size: 1.175rem;
   color: rgba(240,232,216,0.85);
   line-height: 1.9;
   margin-bottom: 1.2rem;
@@ -874,7 +887,7 @@ nav {
 .featured-name em { color: var(--gold); font-style: italic; }
 .featured-desc {
   color: var(--text-mid);
-  font-size: 0.98rem;
+  font-size: 1.105rem;
   line-height: 1.85;
   margin-bottom: 2rem;
 }
@@ -956,7 +969,7 @@ nav {
   border-top: 1px solid rgba(90,70,53,0.1);
 }
 .catalog-cta p {
-  color: var(--text-mid); font-size: 0.95rem;
+  color: var(--text-mid); font-size: 1.075rem;
   max-width: 400px; margin: 0 auto 2rem;
   line-height: 1.8;
 }
@@ -1070,6 +1083,30 @@ footer {
    RESPONSIVE
 ═════════════════════════════════════════ */
 
+/* ─── About photos breakpoint (1400px) ─── */
+/* Outer two-column layout stays. Inner photo grid switches to single-col stack,
+   still filling the text column height with equal rows. */
+@media (max-width: 1400px) {
+  /* Switch inner grid to single column stack */
+  .lm-about-photos-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  /* Wide photo (pee-dee) → center */
+  .lm-about-photo-wide {
+    grid-column: 1;
+    order: 2;
+  }
+
+  /* under-the-magnolia → top */
+  .lm-about-photos-grid img:nth-child(2) { order: 1; }
+
+  /* nursery-sign → bottom */
+  .lm-about-photos-grid img:nth-child(3) { order: 3; }
+}
+
+
 /* ─── Nav breakpoint (1200px) ─── */
 @media (max-width: 1200px) {
   .nav-hamburger { display: flex; }
@@ -1141,11 +1178,17 @@ footer {
   /* Newsletter */
   .newsletter-bg { max-width: 100%; }
 
-  /* Learn More — About */
+  /* Learn More — About: outer grid collapses, single photo on mobile */
   .lm-about-inner  { grid-template-columns: 1fr; gap: 3rem; }
   .lm-about-text   { order: 1; }
-  .lm-about-photos { order: 2; }
+  .lm-about-photos {
+    order: 2;
+    position: relative;
+    aspect-ratio: 16 / 9; /* give the anchor a height on mobile since there's no text column to match */
+  }
+  .lm-about-photos-grid { grid-template-columns: 1fr; grid-template-rows: 1fr; }
   .lm-about-photo:not(.lm-about-photo-wide) { display: none; }
+  .lm-about-photo-wide { order: unset; }
 
   /* Learn More — Climate zones */
   .lm-climate .lm-intro-text { max-width: 100%; }
