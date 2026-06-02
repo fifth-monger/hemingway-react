@@ -29,8 +29,7 @@ export default function Intro() {
             </div>
           </div>
           <br />
-          {/* TODO: Replace # with Square store URL */}
-          <a href="#" className="link-subtle">Explore all daylilies &rarr;</a>
+          <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="link-subtle">Explore all daylilies &rarr;</a>
         </div>
 
         <div className="intro-images">

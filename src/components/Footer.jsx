@@ -46,8 +46,7 @@ export default function Footer() {
               <li><NavLink to="/">Home</NavLink></li>
               <li><NavLink to="/about">Learn More</NavLink></li>
               <li><NavLink to="/visit">Visit Us</NavLink></li>
-              {/* TODO: Replace # with Square store URL */}
-              <li><a href="#">Shop Daylilies</a></li>
+              <li><a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer">Shop Daylilies</a></li>
             </ul>
           </div>
 

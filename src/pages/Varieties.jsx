@@ -17,8 +17,7 @@ export default function Varieties() {
             Hundreds of additional cultivars available in our full catalog —
             browse, read descriptions, and order direct from our store.
           </p>
-          {/* TODO: Replace # with Square store URL */}
-          <a href="#" className="btn btn-primary">Shop the Entire Catalog &rarr;</a>
+          <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Shop the Entire Catalog &rarr;</a>
         </div>
       </section>
       <Footer />

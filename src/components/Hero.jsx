@@ -13,8 +13,7 @@ export default function Hero() {
           and a 1-year guarantee on every plant.
         </p>
         <div className="hero-actions">
-          {/* TODO: Replace # with Square store URL */}
-          <a href="#" className="btn btn-primary">Browse Our Daylilies</a>
+          <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Browse Our Daylilies</a>
           <Link to="/visit" className="btn btn-outline">Plan Your Visit</Link>
         </div>
       </div>

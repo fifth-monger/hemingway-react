@@ -17,8 +17,7 @@ export default function Nav() {
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">Learn More</NavLink></li>
           <li><NavLink to="/visit">Visit Us</NavLink></li>
-          {/* TODO: Replace # with Square store URL */}
-          <li><a href="#" className="nav-cta">Shop Daylilies</a></li>
+          <li><a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="nav-cta">Shop Daylilies</a></li>
         </ul>
 
         <button
@@ -36,8 +35,7 @@ export default function Nav() {
         <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
         <NavLink to="/about" onClick={() => setOpen(false)}>Learn More</NavLink>
         <NavLink to="/visit" onClick={() => setOpen(false)}>Visit Us</NavLink>
-        {/* TODO: Replace # with Square store URL */}
-        <a href="#" className="nav-cta" onClick={() => setOpen(false)}>Shop Daylilies</a>
+        <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="nav-cta" onClick={() => setOpen(false)}>Shop Daylilies</a>
       </div>
     </nav>
   )
