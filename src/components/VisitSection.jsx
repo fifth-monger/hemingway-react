@@ -50,11 +50,11 @@ export default function VisitSection() {
               <div className="contact-block">
                 <div className="contact-item">
                   <span className="ckey">Phone</span>
-                  <span><a href="tel:8439335675">store: 843-933-5675</a></span>
-                  <br />
-                  <span><a href="tel:9193064230">Scott: 919-306-4230</a></span>
-                  <br />
-                  <span><a href="tel:9193064329">Lucille: 919-306-4329</a></span>
+                  <div className="contact-numbers">
+                    <span><a href="tel:8439335675">store: 843-933-5675</a></span>
+                    <span><a href="tel:9193064230">Scott: 919-306-4230</a></span>
+                    <span><a href="tel:9193064329">Lucille: 919-306-4329</a></span>
+                  </div>
                 </div>
                 <div className="contact-item">
                   <span className="ckey">Address</span>

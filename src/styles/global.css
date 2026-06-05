@@ -773,6 +773,10 @@ nav {
   text-transform: uppercase; letter-spacing: 0.08em;
   padding-top: 0.1rem;
 }
+.contact-numbers {
+  display: flex;
+  flex-direction: column;
+}
 .contact-item a { color: var(--gold); text-decoration: none; }
 .contact-item a:hover { text-decoration: underline; }
 
