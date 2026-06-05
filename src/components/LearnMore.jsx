@@ -94,7 +94,7 @@ export default function LearnMore() {
                 </p>
                 <p>
                   The nursery holds official status as an American Hemerocallis Society National Display
-                  Garden. Forty raised display beds are arranged across the property, each labeled with
+                  Garden. Over 80 raised display beds are arranged across the property, each labeled with
                   metal markers identifying the hybridizer behind every cultivar — so visitors can wander
                   the rows and learn as they go. Our collection draws from hybridizers across the country,
                   and we carry varieties you won't find just anywhere.

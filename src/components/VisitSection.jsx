@@ -29,20 +29,20 @@ export default function VisitSection() {
               <table className="hours-table">
                 <tbody>
                   <tr>
-                    <td>Monday – Friday</td>
-                    <td>9:00 am – 5:00 pm</td>
+                    <td>Thu – Sat</td>
+                    <td>9:00 am – 4:00 pm</td>
                   </tr>
                   <tr>
-                    <td>Saturday</td>
-                    <td>9:00 am – 5:00 pm</td>
+                    <td>Spring Season</td>
+                    <td>April 1 – end of June</td>
                   </tr>
                   <tr>
-                    <td>Sunday</td>
-                    <td>By appointment</td>
+                    <td>Fall Season</td>
+                    <td>September 1 – end of October</td>
                   </tr>
                   <tr>
-                    <td>Off Season</td>
-                    <td>Call to confirm</td>
+                    <td>Closed</td>
+                    <td>July 1 – August 31</td>
                   </tr>
                 </tbody>
               </table>
@@ -120,13 +120,13 @@ export default function VisitSection() {
             <div className="vs-tip-card">
               <img
                 src="/images/daylily-beds-winter.jpg"
-                alt="The 40 raised display beds at Hemingway Nursery"
+                alt="The 80+ raised display beds at Hemingway Nursery"
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
                 <h3>Walk the display beds</h3>
                 <p>
-                  Forty raised display beds, every cultivar labeled. Walk the rows,
+                  Over 80 raised display beds, every cultivar labeled. Walk the rows,
                   take your time, and let the plants speak for themselves.
                 </p>
               </div>

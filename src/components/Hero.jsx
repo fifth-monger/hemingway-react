@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="container">
         <p className="hero-eyebrow">Hemingway, South Carolina &nbsp;·&nbsp; Featuring Roycroft Daylilies</p>
         <h1 className="hero-title">
-          Where <em>every bloom</em> is grown with intention
+          Where <em>every bloom</em> is grown with care
         </h1>
         <p className="hero-sub">
           Homegrown daylilies from our fields to your garden — hundreds of cultivars

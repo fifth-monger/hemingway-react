@@ -12,10 +12,7 @@ export default function Footer() {
             <div className="footer-contact">
               <span>3954 Hemingway Hwy, Hemingway, SC 29554</span>
               <span>
-                Scott: <a href="tel:9193064230">919-306-4230</a>
-              </span>
-              <span>
-                Lucille: <a href="tel:9193064329">919-306-4329</a>
+                <a href="tel:8439335675">843-933-5675</a>
               </span>
               <span>
                 <a href="mailto:info@hemingwaynursery.com">info@hemingwaynursery.com</a>
