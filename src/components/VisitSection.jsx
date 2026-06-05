@@ -90,7 +90,7 @@ export default function VisitSection() {
             <div className="vs-tip-card">
               <img
                 src="/images/making-room.jpg"
-                alt="Nursery beds being prepared"
+                alt="Preparing daylily beds at Hemingway Nursery"
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
@@ -103,8 +103,8 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="/images/forestlake-ragamuffin.jpg"
-                alt="Daylily seedling trays"
+                src="/images/misc-sdlg-tray.jpg"
+                alt="Daylily seedling trays at Hemingway Nursery"
                 className="vs-tip-photo"
               />
               <div className="vs-tip-content">
