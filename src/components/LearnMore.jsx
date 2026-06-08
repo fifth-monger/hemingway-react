@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     q: 'Do you offer gift certificates?',
-    a: 'Yes — gift certificates are available in any amount. Call Scott at 919-306-4230 or purchase one directly through the online store.',
+    a: <>Yes — gift certificates are available in any amount. <a href="https://app.squareup.com/gift/42E790C3A2J11/order" target="_blank" rel="noopener noreferrer">Purchase a gift certificate here.</a></>,
   },
 ]
 
