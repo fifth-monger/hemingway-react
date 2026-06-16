@@ -34,13 +34,13 @@ const THEMES = {
     "--text-mid":   "#5a3a00",
     "--text-light": "#8a6a30",
   },
-  "Golden Red": {
+  "Summer Red": {
     "--cream":      "#fffbf0",
     "--parchment":  "#fff3d4",
     "--bark":       "#4a2800",
     "--bark-mid":   "#6b3a00",
     "--gold":       "#f2c4b0",
-    "--gold-light": "#f5b020",
+    "--gold-light": "#d44060",
     "--sage":       "#8a1a0a",
     "--sage-light": "#b02a14",
     "--terra":      "#d94a18",
