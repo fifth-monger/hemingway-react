@@ -37,7 +37,7 @@ const THEMES = {
   "Golden Red": {
     "--cream":      "#fffbf0",
     "--parchment":  "#fff3d4",
-    "--bark":       "#fde8e0",
+    "--bark":       "#4a2800",
     "--bark-mid":   "#6b3a00",
     "--gold":       "#8a1a0a",
     "--gold-light": "#f5b020",
