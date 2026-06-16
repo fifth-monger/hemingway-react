@@ -39,7 +39,7 @@ const THEMES = {
     "--parchment":  "#fff3d4",
     "--bark":       "#4a2800",
     "--bark-mid":   "#6b3a00",
-    "--gold":       "#e8920a",
+    "--gold":       "#8a1a0a",
     "--gold-light": "#f5b020",
     "--sage":       "#8a1a0a",
     "--sage-light": "#b02a14",
