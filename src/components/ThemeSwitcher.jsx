@@ -1,8 +1,5 @@
 // ThemeSwitcher.jsx
 // DEV TOOL — remove before launch
-// Drop this component into App.jsx or index.jsx temporarily:
-//   import ThemeSwitcher from './ThemeSwitcher';
-//   <ThemeSwitcher />  ← add just before closing </div> in your root
 
 import { useState, useEffect } from "react";
 
@@ -40,17 +37,17 @@ const THEMES = {
   "South Seas": {
     "--cream":      "#fff8f2",
     "--parchment":  "#fdeee0",
-    "--bark":       "#8a2a0a",
-    "--bark-mid":   "#b03a10",
-    "--gold":       "#e85a18",
-    "--gold-light": "#f5782a",
-    "--sage":       "#4a7a20",
-    "--sage-light": "#6a9e38",
-    "--terra":      "#c82a0a",
-    "--moss":       "#2a5a0a",
-    "--text":       "#2a1000",
-    "--text-mid":   "#6a2a10",
-    "--text-light": "#9a5a38",
+    "--bark":       "#5a2a0a",
+    "--bark-mid":   "#7a3a10",
+    "--gold":       "#e05a18",
+    "--gold-light": "#f07830",
+    "--sage":       "#4a5e38",
+    "--sage-light": "#6a7e52",
+    "--terra":      "#c02a0a",
+    "--moss":       "#2e4020",
+    "--text":       "#2a1200",
+    "--text-mid":   "#5a2e18",
+    "--text-light": "#8a5a38",
   },
   "Summer Red": {
     "--cream":      "#fff5f0",
@@ -59,10 +56,10 @@ const THEMES = {
     "--bark-mid":   "#8a2a14",
     "--gold":       "#d44a10",
     "--gold-light": "#e86a28",
-    "--sage":       "#5a7a3a",
-    "--sage-light": "#7a9a5a",
+    "--sage":       "#4a5a38",
+    "--sage-light": "#6a7a52",
     "--terra":      "#b81a08",
-    "--moss":       "#3a5a20",
+    "--moss":       "#2e3e20",
     "--text":       "#2a0a00",
     "--text-mid":   "#5a1e10",
     "--text-light": "#8a4a30",
