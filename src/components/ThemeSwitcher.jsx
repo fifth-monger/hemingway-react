@@ -13,7 +13,7 @@ const THEMES = {
     "--gold-light": "#e8a93a",
     "--sage":       "#5a6b4a",
     "--sage-light": "#7a8f68",
-    "--terra":      "#e8a93a",
+    "--terra":      "#b86255",
     "--moss":       "#3a4c2e",
     "--text":       "#2a1e14",
     "--text-mid":   "#5a4535",
