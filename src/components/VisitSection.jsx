@@ -146,8 +146,8 @@ export default function VisitSection() {
           <div className="vs-area-inner">
 
             <div className="vs-area-text">
-              <p className="section-label" style={{ color: 'var(--gold-light)' }}>Worth the Detour</p>
-              <h2 className="vs-heading" style={{ color: 'var(--parchment)' }}>While you're in the area.</h2>
+              <p className="section-label">Worth the Detour</p>
+              <h2 className="vs-heading">While you're in the area.</h2>
               <p>
                 Scott's Bar-B-Que is just down the road — a South Carolina institution
                 that's been smoking whole hogs over wood coals since 1972. It's the kind
