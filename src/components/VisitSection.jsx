@@ -107,7 +107,22 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="/images/misc-sdlg-tray.jpg"
+                src="/images/nursery-picture-3.jpg"
+                alt="The 80+ raised display beds at Hemingway Nursery"
+                className="vs-tip-photo"
+              />
+              <div className="vs-tip-content">
+                <h3>Walk the display beds</h3>
+                <p>
+                  Over 80 raised display beds, every cultivar labeled. Walk the rows,
+                  take your time, and let the plants speak for themselves.
+                </p>
+              </div>
+            </div>
+
+            <div className="vs-tip-card">
+              <img
+                src="/images/misc-parking-lot.jpg"
                 alt="Daylily seedling trays at Hemingway Nursery"
                 className="vs-tip-photo"
               />
@@ -117,21 +132,6 @@ export default function VisitSection() {
                   In addition to bare-root, we carry potted daylilies during the
                   season — already growing, already blooming. Great if you want to
                   see exactly what you're taking home.
-                </p>
-              </div>
-            </div>
-
-            <div className="vs-tip-card">
-              <img
-                src="/images/daylily-beds-winter.jpg"
-                alt="The 80+ raised display beds at Hemingway Nursery"
-                className="vs-tip-photo"
-              />
-              <div className="vs-tip-content">
-                <h3>Walk the display beds</h3>
-                <p>
-                  Over 80 raised display beds, every cultivar labeled. Walk the rows,
-                  take your time, and let the plants speak for themselves.
                 </p>
               </div>
             </div>
