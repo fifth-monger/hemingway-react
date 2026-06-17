@@ -1,16 +1,4 @@
-import { useState } from 'react'
-
 export default function Newsletter() {
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    // TODO: Wire to Mailchimp or preferred email provider
-    setSubmitted(true)
-    setEmail('')
-  }
-
   return (
     <section className="newsletter-section">
       <div className="container">
@@ -24,20 +12,21 @@ export default function Newsletter() {
               New varieties, planting tips, sale windows, and field updates —
               once a month during the growing season.
             </p>
-            {submitted ? (
-              <p className="newsletter-thanks">You're on the list. Talk soon.</p>
-            ) : (
-              <form className="newsletter-form" onSubmit={handleSubmit}>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  required
-                />
-                <button className="newsletter-btn" type="submit">Subscribe</button>
-              </form>
-            )}
+            <form
+              className="newsletter-form"
+              action="https://www.ymlp.com/subscribe.php?id=gusmewegmgs"
+              method="post"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <input
+                type="email"
+                name="YMP0"
+                placeholder="your@email.com"
+                required
+              />
+              <button className="newsletter-btn" type="submit">Subscribe</button>
+            </form>
           </div>
         </div>
       </div>
