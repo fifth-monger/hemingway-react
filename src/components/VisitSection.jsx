@@ -158,7 +158,7 @@ export default function VisitSection() {
                 href="https://www.google.com/maps/search/?api=1&query=2734+Hemingway+Hwy+Hemingway+SC+29554"
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline btn-outline-dark"
                 style={{ fontSize: '0.75rem', marginTop: '1.5rem' }}
               >
                 Get Directions

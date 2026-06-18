@@ -4,19 +4,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:      #f9f4ec;
-  --parchment:  #f0e8d8;
-  --bark:       #3d2b1f;
-  --bark-mid:   #5c3d28;
-  --gold:       #c8891a;
-  --gold-light: #e8a93a;
-  --sage:       #5a6b4a;
-  --sage-light: #7a8f68;
-  --terra:      #b86255;
-  --moss:       #3a4c2e;
-  --text:       #2a1e14;
-  --text-mid:   #5a4535;
-  --text-light: #8a7060;
+  --cream:      #fffbf0;
+  --parchment:  #fff3d4;
+  --bark:       #3d0a0a;
+  --bark-mid:   #5c1a10;
+  --gold:       #f2c4b0;
+  --gold-light: #c8d020;
+  --sage:       #d4724a;
+  --sage-light: #e8926a;
+  --terra:      #d44060;
+  --moss:       #b84a28;
+  --text:       #2a1800;
+  --text-mid:   #5a3a00;
+  --text-light: #8a6a30;
   --serif: 'Playfair Display', Georgia, serif;
   --sans:  'Jost', system-ui, sans-serif;
   --max:   85%;
@@ -62,6 +62,12 @@ body {
   border: 1.5px solid rgba(253,248,242,0.55);
 }
 .btn-outline:hover { border-color: var(--terra); color: var(--terra); }
+
+.btn-outline-dark {
+  color: var(--bark);
+  border-color: rgba(61,10,10,0.45);
+}
+.btn-outline-dark:hover { border-color: var(--terra); color: var(--terra); }
 
 
 /* ─────────────────────────────────────────
