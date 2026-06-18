@@ -55,7 +55,7 @@ export default function Reviews() {
         </div>
 
         <div className="review-cta-box">
-          <h3 className="serif" style={{ fontSize: '1.3rem', fontWeight: 400, color: 'var(--gold-light)' }}>
+          <h3 className="serif" style={{ fontSize: '1.3rem', fontWeight: 400, color: 'var(--chartreuse)' }}>
             Enjoyed your daylilies?
           </h3>
           <p>
