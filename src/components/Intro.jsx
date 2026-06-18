@@ -29,7 +29,7 @@ export default function Intro() {
             </div>
           </div>
           <br />
-          <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="link-subtle">Explore all daylilies &rarr;</a>
+          <a href="https://hemingwaynursery.square.site/s/shop" target="_blank" rel="noopener noreferrer" className="link-subtle"><span>Explore all daylilies</span><span className="link-arrow">&rarr;</span></a>
         </div>
 
         <div className="intro-images">

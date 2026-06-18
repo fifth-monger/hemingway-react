@@ -39,8 +39,6 @@ body {
 ───────────────────────────────────────── */
 .container { max-width: var(--max); margin: 0 auto; padding-left: clamp(1.25rem, 4vw, 3rem); padding-right: clamp(1.25rem, 4vw, 3rem); }
 .serif  { font-family: var(--serif); }
-.gold   { color: var(--peach); }
-.terra  { color: var(--rose); }
 
 
 /* ─────────────────────────────────────────
@@ -59,7 +57,7 @@ body {
   box-shadow: 0 1px 2px rgba(0,0,0,0.25), 0 4px 14px rgba(0,0,0,0.28);
 }
 .btn-primary:hover {
-  background: #f7d2c2;
+  background: var(--rose); color: var(--parchment);
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.28), 0 10px 26px rgba(0,0,0,0.34);
 }
@@ -69,22 +67,35 @@ body {
 }
 
 .btn-outline {
-  background: rgba(253,248,242,0.04); color: #fdf8f2;
-  border: 1.5px solid rgba(253,248,242,0.8);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+  background: rgba(61,10,10,0.5);
+  color: var(--peach);
+  border: 1.5px solid var(--rose);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 .btn-outline:hover {
-  background: rgba(253,248,242,0.12);
-  border-color: #fdf8f2;
+  background: var(--rose);
+  color: var(--parchment);
+  border-color: var(--rose);
   transform: translateY(-2px);
 }
 .btn-outline:active { transform: translateY(0); }
 
 .btn-outline-dark {
+  background: transparent;          /* cancel the dark hero panel */
   color: var(--bark);
-  border-color: rgba(61,10,10,0.45);
+  border: 1.5px solid rgba(61,10,10,0.45);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
-.btn-outline-dark:hover { border-color: var(--rose); color: var(--rose); }
+.btn-outline-dark:hover {
+  background: var(--rose);
+  color: var(--parchment);          /* light text on rose — readable */
+  border-color: var(--rose);
+  transform: translateY(-2px);
+}
 
 
 /* ─────────────────────────────────────────
@@ -277,10 +288,37 @@ nav {
   line-height: 1.85;
 }
 .intro-text .link-subtle {
-  color: var(--peach); font-weight: 500; text-decoration: none;
-  border-bottom: 1px solid var(--peach);
-  font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clay);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
 }
+.intro-text .link-subtle span:first-child {
+  position: relative;
+  padding-bottom: 4px;
+}
+.intro-text .link-subtle span:first-child::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;   /* follows the color, peach→rose */
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.intro-text .link-subtle .link-arrow {
+  transition: transform 0.2s ease;
+}
+.intro-text .link-subtle:hover { color: var(--rose); }
+.intro-text .link-subtle:hover .link-arrow { transform: translateX(5px); }
 
 .intro-images {
   display: grid;
