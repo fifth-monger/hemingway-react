@@ -64,7 +64,7 @@ export default function Reviews() {
           <a
             href="https://g.page/HemingwayNursery/review?rc"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn btn-primary"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
           >

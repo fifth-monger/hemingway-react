@@ -29,7 +29,7 @@ export default function Footer() {
             <a
               href="https://g.page/HemingwayNursery/review?rc"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="footer-review-btn"
             >
               ★ Leave us a Google review

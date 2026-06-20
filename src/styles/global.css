@@ -247,7 +247,7 @@ nav {
 }
 
 .scroll-hint {
-  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: .80rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 6px;
   color: rgba(253,248,242,0.5);
   font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
@@ -504,12 +504,6 @@ nav {
   transition: background 0.2s;
 }
 .newsletter-btn:hover { background: var(--rose); }
-
-.newsletter-thanks {
-  font-size: 1rem; font-weight: 400;
-  color: var(--chartreuse);
-  letter-spacing: 0.05em;
-}
 
 
 /* ═════════════════════════════════════════
