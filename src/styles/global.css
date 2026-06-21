@@ -869,19 +869,25 @@ nav {
   border: 1px solid rgba(90,70,53,0.08);
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(60,40,20,0.10);
+  box-shadow: 0 4px 24px rgba(60,40,20,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vs-tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(60,40,20,0.18);
 }
 .vs-tip-photo {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
+  filter: saturate(1.05) contrast(1.02);
 }
 .vs-tip-content { padding: 1.75rem; }
 .vs-tip-card h3 {
   font-family: var(--serif);
   font-size: 1.15rem; font-weight: 400;
-  color: var(--bark-mid);
+  color: var(--clay);
   margin-bottom: 0.8rem;
 }
 .vs-tip-card p {
