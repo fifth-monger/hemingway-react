@@ -19,7 +19,7 @@
   --text-light: #8a6a30;
   --serif: 'Playfair Display', Georgia, serif;
   --sans:  'Jost', system-ui, sans-serif;
-  --max:   1200px;
+  --max:   1400px;
 }
 
 html { scroll-behavior: smooth; }

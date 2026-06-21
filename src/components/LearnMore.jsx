@@ -121,7 +121,7 @@ export default function LearnMore() {
                   className="lm-about-photo"
                 />
                 <img
-                  src="/images/nursery-sign.jpg"
+                  src="/images/nursery-sign.png"
                   alt="Hemingway Nursery sign"
                   className="lm-about-photo"
                 />
