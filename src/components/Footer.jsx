@@ -55,8 +55,8 @@ export default function Footer() {
             href="https://victoriagarcia.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: 'inherit', textDecoration: 'none' }}
-          >Built by Victoria Garcia</a>
+            className="footer-credit"
+          > Built by Victoria Garcia</a>
         </div>
       </div>
     </footer>
