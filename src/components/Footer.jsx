@@ -51,6 +51,12 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© 2026 Hemingway Nursery. All rights reserved.</span>
+          <a
+            href="https://victoriagarcia.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'inherit', textDecoration: 'none' }}
+          >Built by Victoria Garcia</a>
         </div>
       </div>
     </footer>
