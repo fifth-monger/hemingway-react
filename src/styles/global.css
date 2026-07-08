@@ -206,7 +206,7 @@ nav {
   min-height: calc(100vh - 60px);
   background:
     radial-gradient(ellipse at 35% 55%, rgba(42,30,20,0.88) 0%, rgba(42,30,20,0.72) 45%, rgba(42,30,20,0.42) 75%, rgba(42,30,20,0.18) 100%),
-    url('/images/nursery-picture-2.jpg') center/cover no-repeat;
+    url('/images/nursery-picture-2.webp') center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: center;
   position: relative;
 }
