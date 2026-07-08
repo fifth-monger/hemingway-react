@@ -93,7 +93,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="/images/making-room.jpg"
+                src="/images/making-room.webp"
                 alt="Preparing daylily beds at Hemingway Nursery"
                 className="vs-tip-photo"
               />
@@ -107,7 +107,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="/images/nursery-picture-3.jpg"
+                src="/images/nursery-picture-3.webp"
                 alt="The 80+ raised display beds at Hemingway Nursery"
                 className="vs-tip-photo"
               />
@@ -122,7 +122,7 @@ export default function VisitSection() {
 
             <div className="vs-tip-card">
               <img
-                src="/images/misc-parking-lot.jpg"
+                src="/images/misc-parking-lot.webp"
                 alt="Daylily seedling trays at Hemingway Nursery"
                 className="vs-tip-photo"
               />
@@ -167,7 +167,7 @@ export default function VisitSection() {
 
             <div className="vs-area-img">
               <img
-                src="/images/maxresdefault.jpg"
+                src="/images/maxresdefault.webp"
                 alt="Scott's Bar-B-Que in Hemingway, SC"
               />
             </div>

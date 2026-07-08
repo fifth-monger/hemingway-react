@@ -438,7 +438,7 @@ nav {
 .newsletter-bg {
   background:
     radial-gradient(ellipse at center, rgba(42,30,20,0.88) 0%, rgba(42,30,20,0.75) 50%, rgba(42,30,20,0.45) 78%, rgba(42,30,20,0.18) 100%),
-    url('/images/newsletter-bg.JPG') center/cover no-repeat;
+    url('/images/newsletter-bg.webp') center/cover no-repeat;
   padding: 6rem clamp(1.25rem, 3vw, 2.5rem);
   text-align: center;
   margin: 0 auto;
@@ -582,7 +582,7 @@ nav {
 .lm-climate {
   background:
     radial-gradient(ellipse at center, rgba(45,42,18,0.93) 0%, rgba(45,42,18,0.88) 55%, rgba(45,42,18,0.62) 78%, rgba(45,42,18,0.18) 100%),
-    url('/images/nursery-picture-3.jpg') center/cover no-repeat;
+    url('/images/nursery-picture-3.webp') center/cover no-repeat;
 }
 .lm-climate { text-align: center; }
 .lm-climate .lm-heading    { color: var(--parchment); }

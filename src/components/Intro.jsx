@@ -34,17 +34,17 @@ export default function Intro() {
 
         <div className="intro-images">
           <img
-            src="/images/Blackthorne-HR.jpg"
+            src="/images/Blackthorne-HR.webp"
             alt="Blackthorne daylily at Hemingway Nursery"
             className="intro-img"
           />
           <img
-            src="/images/FEATHERED.jpg"
+            src="/images/FEATHERED.webp"
             alt="Feathered daylily in bloom at Hemingway Nursery"
             className="intro-img"
           />
           <img
-            src="/images/Carolina-Dreaming-Clump-3.jpg"
+            src="/images/Carolina-Dreaming-Clump-3.webp"
             alt="Carolina Dreaming daylily clump at Hemingway Nursery"
             className="intro-img  intro-img-wide"
           />

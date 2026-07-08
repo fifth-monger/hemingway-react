@@ -110,18 +110,18 @@ export default function LearnMore() {
                   the text column height without contributing its own intrinsic size */}
               <div className="lm-about-photos-grid">
                 <img
-                  src="/images/pee-dee-farmers-market.jpg"
+                  src="/images/pee-dee-farmers-market.webp"
                   alt="Pee Dee Farmers Market Spring Flower Festival 2024"
                   className="lm-about-photo lm-about-photo-wide"
                   style={{ objectPosition: 'left top' }}
                 />
                 <img
-                  src="/images/under-the-magnolia.jpg"
+                  src="/images/under-the-magnolia.webp"
                   alt="Daylilies under the magnolia at Hemingway Nursery"
                   className="lm-about-photo"
                 />
                 <img
-                  src="/images/nursery-sign.png"
+                  src="/images/nursery-sign.webp"
                   alt="Hemingway Nursery sign"
                   className="lm-about-photo"
                 />
@@ -205,7 +205,7 @@ export default function LearnMore() {
             <aside className="faq-sidebar">
               <div className="faq-sidebar-card">
                 <img
-                  src="/images/bob-roycroft-field.jpg"
+                  src="/images/bob-roycroft-field.webp"
                   alt="Bob Roycroft working in the field"
                   className="faq-sidebar-photo"
                 />
