@@ -6,7 +6,7 @@ export default function VisitSection() {
       <div className="vs-banner">
         <div className="vs-banner-inner">
           <img
-            src="/images/may-29-daylilies.jpg"
+            src="/images/may-29-daylilies.webp"
             alt="Container daylilies under the shade structure at Hemingway Nursery"
           />
         </div>
